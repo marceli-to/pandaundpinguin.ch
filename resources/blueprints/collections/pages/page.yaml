@@ -48,6 +48,13 @@ tabs:
                       fields:
                         -
                           import: projects
+                    editor:
+                      display: Texteditor
+                      instructions: 'Texteditor hinzufügen'
+                      icon: text-formatting-markdown
+                      fields:
+                        -
+                          import: editor
   seo:
     display: SEO
     sections:
