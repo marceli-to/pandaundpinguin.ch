@@ -34,6 +34,20 @@ tabs:
                       fields:
                         -
                           import: intro
+                    video:
+                      display: Video
+                      instructions: 'Fullscreen-Video hinzufügen'
+                      icon: media-webcam-video
+                      fields:
+                        -
+                          import: video
+                    projects:
+                      display: Projekte
+                      instructions: 'Projekte für Startseite'
+                      icon: dashboard-layout
+                      fields:
+                        -
+                          import: projects
   seo:
     display: SEO
     sections:

@@ -1,5 +1,5 @@
 <div 
-  class="bg-rose fixed right-0 top-0 h-dvh w-full z-50 md:relative md:h-auto md:!block md:bg-transparent md:w-full"
+  class="bg-rose fixed right-0 top-0 h-dvh w-full z-50 md:relative md:h-auto md:!block md:!opacity-100 md:bg-transparent md:w-full"
   x-cloak 
   x-show="menu"
   x-transition:enter="transition ease-out duration-240"
@@ -8,8 +8,8 @@
   x-transition:leave="transition ease-in duration-240"
   x-transition:leave-start="opacity-100"
   x-transition:leave-end="opacity-0">
-  <nav class="text-white md:text-black md:w-full md:max-w-6xl md:mx-auto md:!opacity-100">
-    <ul class="flex flex-col pt-85 items-center w-full h-dvh md:pt-0 md:h-auto md:flex-row md:justify-between md:w-full text-md md:text-sm leading-none">
+  <nav class="text-white md:text-black md:w-full md:max-w-6xl md:mx-auto md:px-50 md:py-25">
+    <ul class="flex flex-col justify-center items-center w-full h-dvh md:h-auto md:flex-row md:justify-between md:w-full text-md md:text-sm leading-none">
       {{ nav:main }}
         {{ partial:menu/item }}
       {{ /nav:main }}

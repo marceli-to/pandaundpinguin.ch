@@ -1,0 +1,11 @@
+title: Projekte
+fields:
+  -
+    import: editor
+  -
+    handle: projects
+    field:
+      collections:
+        - work
+      type: entries
+      display: Projekte

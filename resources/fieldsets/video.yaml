@@ -1,0 +1,10 @@
+title: Video
+fields:
+  -
+    handle: video
+    field:
+      max_files: 1
+      container: assets
+      folder: video
+      type: assets
+      display: Video

@@ -5,3 +5,11 @@
 {{ if type == 'intro' }}
   {{ partial:components/misc/intro }}
 {{ /if }}
+
+{{ if type == 'video' }}
+  {{ partial:components/media/video }}
+{{ /if }}
+
+{{ if type == 'projects' }}
+  {{ partial:work/teaser }}
+{{ /if }}

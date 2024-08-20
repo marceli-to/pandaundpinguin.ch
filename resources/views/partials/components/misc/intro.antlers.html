@@ -1,11 +1,11 @@
-{{ partial:layout/inner class="mb-35" }}
-  <div class="min-h-screen mx-auto">
-    <div class="pt-100">
-      {{ partial:icons/animation class="max-w-[90%] md:max-w-[587px]" }}
-      {{ partial:icons/brand class="block w-full h-auto mt-45 max-w-145" }}
+{{ partial:layout/inner }}
+  <div class="min-h-screen flex flex-col justify-center mx-auto">
+    <div class="max-w-[90%] md:max-w-[587px] md:mx-auto">
+      {{ partial:icons/animation class="w-full h-auto" }}
+      {{ partial:icons/brand class="block w-full h-auto mt-45 lg:mt-60 max-w-140 md:max-w-180 lg:max-w-225" }}
     </div>
   </div>
-  <article class="text-sm sm:text-lg lg:text-2xl max-w-2xl">
+  {{ partial:layout/article }}
     {{ editor }}
-  </article>
+  {{ /partial:layout/article }}
 {{ /partial:layout/inner }}

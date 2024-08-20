@@ -32,7 +32,7 @@ export default {
         'md': '1.5rem', // 24px
         'lg': '1.875rem', // 30px
         'xl': '2.25rem', // 36px
-        '2xl': '2.5rem', // 40px
+        '2xl': '3rem', // 48px
         '3xl': '3rem', // 60px
         '4xl': '4rem', // 80px
         '5xl': '5rem', // 100px
