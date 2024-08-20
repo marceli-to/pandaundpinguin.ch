@@ -1,0 +1,81 @@
+{{# <footer>
+  {{ if contact_information:address }}
+    <address class="block not-italic">
+      {{ contact_information:address | nl2br }}
+    </address>
+  {{ /if }}
+
+  {{ if contact_information:email }}
+    <a 
+      href="mailto:{{ contact_information:email }}" 
+      title="{{ "Schreiben Sie uns eine E-Mail" | trans }}"
+      class="block">
+      {{ contact_information:email }}
+    </a>
+  {{ /if }}
+
+  {{ if contact_information:phone }}
+    <a 
+      href="tel:{{ contact_information:phone }}" 
+      title="{{ "Rufen Sie uns an" | trans }}"
+      class="block">
+      {{ contact_information:phone }}
+    </a>
+  {{ /if }}
+
+  {{ if social_media_accounts:instagram }}
+    <a 
+      href="{{ social_media_accounts:instagram }}" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      title="Panda & Pinguin auf Instagram">
+      {{ partial:icons/instagram class="block w-auto h-28" }}
+    </a>
+  {{ /if }}
+  {{ if social_media_accounts:facebook }}
+    <a 
+      href="{{ social_media_accounts:facebook }}" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      title="Panda & Pinguin auf Instagram">
+      {{ partial:icons/facebook class="block w-auto h-28" }}
+    </a>
+  {{ /if }}
+  {{ if social_media_accounts:linkedin }}
+    <a 
+      href="{{ social_media_accounts:linkedin }}" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      title="Panda & Pinguin auf Instagram">
+      {{ partial:icons/linkedin class="block w-auto h-28" }}
+    </a>
+  {{ /if }}
+  {{ if social_media_accounts:youtube }}
+    <a 
+      href="{{ social_media_accounts:youtube }}" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      title="Panda & Pinguin auf Instagram">
+      {{ partial:icons/youtube class="block w-auto h-28" }}
+    </a>
+  {{ /if }}
+
+  <a 
+    href="/impressum"
+    title="Impressum"
+    target="_blank"
+    class="block font-bold">
+    Impressum
+  </a>
+  <a 
+    href="/datenschutz"
+    title="Datenschutz"
+    target="_blank"
+    class="block font-bold">
+    Datenschutz
+  </a>
+</footer>
+{{ vite src="resources/js/app.js" }}
+{{ livewire:scripts }}
+</body>
+</html> #}}
