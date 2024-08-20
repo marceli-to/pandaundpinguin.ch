@@ -23,7 +23,8 @@ export default {
       },
 
       colors: {
-        'rose': '#e6007e',
+        'cerise': '#e6007e',
+        'rose': '#FFDDE2'
       },
 
       fontSize: {

@@ -1,0 +1,18 @@
+title: 'Über uns'
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Titel
+      validate:
+        - required
+  -
+    import: editor
+  -
+    handle: image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: Bild

@@ -55,6 +55,13 @@ tabs:
                       fields:
                         -
                           import: editor
+                    about_us:
+                      display: 'Über uns'
+                      instructions: 'Über uns Teaser hinzufügen'
+                      icon: text-formatting-image-left
+                      fields:
+                        -
+                          import: about
   seo:
     display: SEO
     sections:

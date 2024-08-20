@@ -119,6 +119,16 @@ return [
           'xl-focal-4-3' => ['w' => 1440, 'h' => 1080, 'q' => 90, 'fit' => 'crop_focal'],
           '2xl-focal-4-3' => ['w' => 1680, 'h' => 1260, 'q' => 90, 'fit' => 'crop_focal'],
 
+          // Focal point image (3:4)
+          'md-focal-3-4-webp' => ['w' => 600, 'h' => 800, 'q' => 90, 'fit' => 'crop_focal', 'fm' => 'webp'],
+          'lg-focal-3-4-webp' => ['w' => 900, 'h' => 1200, 'q' => 90, 'fit' => 'crop_focal', 'fm' => 'webp'],
+          'xl-focal-3-4-webp' => ['w' => 1200, 'h' => 1600, 'q' => 90, 'fit' => 'crop_focal', 'fm' => 'webp'],
+          '2xl-focal-3-4-webp' => ['w' => 1500, 'h' => 2000, 'q' => 90, 'fit' => 'crop_focal', 'fm' => 'webp'],
+          'md-focal-3-4' => ['w' => 600, 'h' => 800, 'q' => 90, 'fit' => 'crop_focal'],
+          'lg-focal-3-4' => ['w' => 900, 'h' => 1200, 'q' => 90, 'fit' => 'crop_focal'],
+          'xl-focal-3-4' => ['w' => 1200, 'h' => 1600, 'q' => 90, 'fit' => 'crop_focal'],
+          '2xl-focal-3-4' => ['w' => 1500, 'h' => 2000, 'q' => 90, 'fit' => 'crop_focal'],
+
           // Focal point images (16:9)
           'md-focal-16-9-webp' => ['w' => 768, 'h' => 432, 'q' => 90, 'fit' => 'crop_focal', 'fm' => 'webp'],
           'lg-focal-16-9-webp' => ['w' => 1280, 'h' => 720, 'q' => 90, 'fit' => 'crop_focal', 'fm' => 'webp'],
