@@ -14,49 +14,28 @@ export default {
   theme: {
     extend: {
 
-      backgroundPosition: {
-        'right-center': 'right 10px center',
-      },
-
-      backgroundImage: {
-        'marker': "url('../img/marker.svg')",
-        'dropdown': "url(\"data:image/svg+xml,%3Csvg width='18' height='12' viewBox='0 0 18 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.7 1.84095L9.20001 9.39999L1.70001 1.84095' stroke='white' stroke-width='3'/%3E%3C/svg%3E\")",
-      },
-
       screens: {
         'xs': '480px',
-        '3xl': '1800px',
       },
 
       fontFamily: {
-        'roboto-condensed-regular': ['Roboto Condensed', ...defaultTheme.fontFamily.sans],
-        'roboto-condensed-bold': ['Roboto Condensed', ...defaultTheme.fontFamily.sans],
+        'articulat-cf': ['articulat-cf', ...defaultTheme.fontFamily.sans],
       },
 
       colors: {
-        'amber': '#F9AF00',
-        'lime': '#CED36D',
-        'vanilla': '#F7F7D2',
-        'steel': '#808B8F',
-        'lemon': '#DEDF15',
-        'olive': '#C4C613',
-        'sky': '#AADDF6',
-        'honey': '#FDDE99',
-        'ice': '#DEF2FC',
-        'cloud': '#CCCCCC',
+        'rose': '#e6007e',
       },
 
       fontSize: {
-        'tiny': '0.8125rem', // 13px
-        'xxs': '0.875rem', // 14px
-        'xs': '0.9375rem', // 15px
-        'sm': '1.0625rem', // 17px
-        'md': '1.125rem', // 18px
-        'lg': '1.25rem', // 20px
-        'xl': '1.3125rem', // 21px
-        '2xl': '1.5625rem', // 25px
-        '3xl': '1.875rem', // 32px
-        '4xl': '2.5rem', // 52px
+        'xxs': '0.75rem', // 12px
+        'sm': '1.25rem', // 20px
+        'md': '1.5rem', // 24px
+        'lg': '1.875rem', // 30px
+        'xl': '2.25rem', // 36px
+        '2xl': '2.5rem', // 40px
+        '3xl': '3rem', // 60px
+        '4xl': '4rem', // 80px
+        '5xl': '5rem', // 100px
       },
       
       zIndex: {

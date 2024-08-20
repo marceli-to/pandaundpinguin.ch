@@ -27,9 +27,13 @@ tabs:
                   display: Hauptelemente
                   icon: addon-boxes-stack
                   sets:
-                    neues_set:
-                      display: 'Neues Set'
-                      fields: {  }
+                    intro:
+                      display: Intro
+                      instructions: 'Intro für Homepage hinzufügen'
+                      icon: text-formatting-initial-letter
+                      fields:
+                        -
+                          import: intro
   seo:
     display: SEO
     sections:
