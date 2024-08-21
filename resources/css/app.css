@@ -79,3 +79,16 @@ body.privacy main li:before {
 body.privacy main a {
 }
 
+@keyframes add-shadow {
+  to { background-color: rgba(255,255,255,.4); }
+}
+
+@supports (animation-timeline: scroll()) {
+  header {
+    animation: add-shadow linear both;
+  }
+  header {
+    animation-timeline: scroll();
+    animation-range: 0 150px;
+  }
+}
