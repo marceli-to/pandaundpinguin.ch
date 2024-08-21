@@ -31,7 +31,7 @@ main li {
 
 /* Text */
 h1 {
-  @apply mb-20 md:mb-40 lg:mb-60;
+  @apply text-sm xs:text-lg md:text-4xl xl:text-5xl mb-20 md:mb-40 xl:mb-60;
 }
 
 h2 {
@@ -46,8 +46,44 @@ em, i {
 
 
 /* Helpers */
+.theme-rose {
+  @apply bg-rose;
+}
+
+.theme-mint {
+  @apply bg-mint;
+}
+
+.theme-lavender {
+  @apply bg-lavender;
+}
+
 .nobr {
   @apply whitespace-nowrap;
+}
+
+.max-w-inner {
+  @apply max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl;
+}
+
+.text-large {
+  @apply text-sm xs:text-lg md:text-4xl xl:text-5xl
+}
+
+.text-small {
+  @apply text-sm md:text-md xl:text-lg
+}
+
+.text-large p {
+  @apply text-balance
+}
+
+body.page-team main {
+  @apply !pt-0;
+}
+
+body.page-team header {
+  @apply bg-transparent
 }
 
 body.privacy main {
@@ -77,18 +113,4 @@ body.privacy main li:before {
 }
 
 body.privacy main a {
-}
-
-@keyframes add-shadow {
-  to { background-color: rgba(255,255,255,.4); }
-}
-
-@supports (animation-timeline: scroll()) {
-  header {
-    animation: add-shadow linear both;
-  }
-  header {
-    animation-timeline: scroll();
-    animation-range: 0 150px;
-  }
 }

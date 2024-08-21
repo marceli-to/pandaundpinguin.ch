@@ -18,17 +18,24 @@ export default {
         'xs': '480px',
       },
 
+      maxWidth: {
+        '8xl': '96rem',
+      },
+
       fontFamily: {
         'articulat-cf': ['articulat-cf', ...defaultTheme.fontFamily.sans],
       },
 
       colors: {
         'cerise': '#e6007e',
-        'rose': '#FFDDE2'
+        'rose': '#ffddea',
+        'mint': '#b4ffe8',
+        'lavender': '#f7ceff'
       },
 
       fontSize: {
         'xxs': '0.75rem', // 12px
+        'xs': '1rem', // 16px
         'sm': '1.25rem', // 20px
         'md': '1.5rem', // 24px
         'lg': '1.875rem', // 30px

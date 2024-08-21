@@ -1,0 +1,66 @@
+title: Team
+fields:
+  -
+    handle: team_member
+    field:
+      type: replicator
+      display: Teammitglied
+      collapse: true
+      sets:
+        team_member:
+          display: Teammitglied
+          instructions: 'Teammitglied hinzufügen'
+          icon: text-formatting-image-left
+          sets:
+            team_member:
+              display: Teammitglied
+              instructions: 'Teammitglied hinzufügen'
+              icon: text-formatting-image-left
+              fields:
+                -
+                  handle: name
+                  field:
+                    type: text
+                    display: Name
+                    validate:
+                      - required
+                -
+                  handle: role
+                  field:
+                    type: text
+                    display: Position
+                -
+                  handle: email
+                  field:
+                    input_type: email
+                    type: text
+                    display: E-Mail
+                -
+                  handle: text
+                  field:
+                    buttons:
+                      - unorderedlist
+                      - removeformat
+                      - anchor
+                    toolbar_mode: floating
+                    remove_empty_nodes: true
+                    type: bard
+                    display: Text
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Bild
+                    folder: team
+                -
+                  handle: background
+                  field:
+                    options:
+                      rose: Rosa
+                      mint: Minze
+                      lavender: Lavendel
+                    default: rose
+                    type: select
+                    display: Hintergrund

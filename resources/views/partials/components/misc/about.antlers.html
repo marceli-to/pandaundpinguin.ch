@@ -1,19 +1,24 @@
 <div class="bg-rose">
   {{ partial:layout/inner }}
     <div class="sm:grid sm:grid-cols-12 sm:gap-x-30">
-      <article class="sm:col-span-7 py-20 md:py-40 lg:py-60">
-        <h2 class="mb-15 md:mb-30 lg:mb-45">{{ title }}</h2>
+      <article class="sm:col-span-7 py-30 md:py-40 xl:py-60">
+        <h2 class="mb-20 xl:mb-30">{{ title }}</h2>
         <div class="text-sm md:text-md xl:text-lg [&>p]:text-balance">
           {{ editor }}
+          <a 
+            href="/ueber-uns" 
+            title="Über uns" 
+            class="inline-block mt-40 md:mt-60 xl:mt-80 hover:underline underline-offset-8 decoration-2">
+            Mehr über uns
+          </a>
         </div>
       </article>
-        {{ partial:components/media/image 
-          :image="image" 
-          class="w-full h-auto object-cover"
-          wrapperClass="sm:col-span-5"
-          preset="focal-3-4"
-          :sizes="['md','lg']"
-           }}
+      {{ partial:components/media/image 
+        :image="image" 
+        class="w-full h-auto object-cover"
+        wrapperClass="sm:col-span-5 pb-30 md:pb-0"
+        preset="focal-3-4"
+        :sizes="['md','lg']" }}
     </div>
   {{ /partial:layout/inner }}
 </div>

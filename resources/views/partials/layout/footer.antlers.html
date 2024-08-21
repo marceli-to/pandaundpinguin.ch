@@ -1,25 +1,25 @@
 {{# <footer>
-  {{ if contact_information:address }}
+  {{ if contact:address }}
     <address class="block not-italic">
-      {{ contact_information:address | nl2br }}
+      {{ contact:address | nl2br }}
     </address>
   {{ /if }}
 
-  {{ if contact_information:email }}
+  {{ if contact:email }}
     <a 
-      href="mailto:{{ contact_information:email }}" 
+      href="mailto:{{ contact:email }}" 
       title="{{ "Schreiben Sie uns eine E-Mail" | trans }}"
       class="block">
-      {{ contact_information:email }}
+      {{ contact:email }}
     </a>
   {{ /if }}
 
-  {{ if contact_information:phone }}
+  {{ if contact:phone }}
     <a 
-      href="tel:{{ contact_information:phone }}" 
+      href="tel:{{ contact:phone }}" 
       title="{{ "Rufen Sie uns an" | trans }}"
       class="block">
-      {{ contact_information:phone }}
+      {{ contact:phone }}
     </a>
   {{ /if }}
 

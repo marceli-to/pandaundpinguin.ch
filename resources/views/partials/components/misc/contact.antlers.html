@@ -1,0 +1,51 @@
+{{ partial:layout/inner }}
+  
+  {{ partial:layout/article }}
+    <h1>Kontakt</h1>
+    <div class="relative">
+      <div class="mb-20 md:mb-40 xl:mb-60">
+        {{ if contact:text }}
+          {{ contact:text }}
+        {{ /if }}
+      </div>
+      <address class="block not-italic">
+        {{ if contact:name }}
+          {{ contact:name }}<br>
+        {{ /if }}
+        {{ if contact:email }}
+          <a 
+            href="mailto:{{ contact:email }}"
+            class="hover:text-cerise transition-colors block"
+            title="Schreib uns!">
+            {{ contact:email }}
+          </a>
+        {{ /if }}
+        {{ if contact:phone }}
+          <a 
+            href="tel:{{ contact:phone }}"
+            class="hover:text-cerise transition-colors block"
+            title="Ruf uns an!">
+            {{ contact:phone }}
+          </a>
+        {{ /if }}
+        {{ if contact:address }}
+          <a 
+            href="https://maps.app.goo.gl/UpCxfZ8wjA9FToMm9" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="hover:text-cerise transition-colors block" 
+            title="Komm vorbei!">
+            {{ contact:address | nl2br }}
+          </a>
+        {{ /if }}
+      </address>
+      {{ if contact:imprint }}
+        <div class="mt-40 md:mt-60 xl:mt-80 text-xs sm:text-sm md:text-md xl:text-lg">
+          {{ contact:imprint }}
+        </div>
+      {{ /if }}
+      {{ partial:icons/logo class="w-full h-auto absolute right-0 top-0 hidden sm:block sm:max-w-[240px] md:max-w-[300px] lg:max-w-[400px] xl:max-w-[460px]" }}
+    </div>
+  {{ /partial:layout/article }}
+
+{{ /partial:layout/inner }}

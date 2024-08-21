@@ -62,6 +62,18 @@ tabs:
                       fields:
                         -
                           import: about
+                    contact:
+                      display: Kontakt
+                      instructions: 'Kontaktinformationen (globale Inhalte) hinzufügen'
+                      icon: form-address-field
+                      fields: {  }
+                    team:
+                      display: Team
+                      instructions: 'Team hinzufügen'
+                      icon: text-formatting-image-left
+                      fields:
+                        -
+                          import: team
   seo:
     display: SEO
     sections:
