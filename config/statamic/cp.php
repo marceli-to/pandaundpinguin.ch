@@ -47,15 +47,6 @@ return [
           'width' => 50,
           'sort' => 'order',
         ], 
-
-        [ 
-          'type' => 'collection',
-          'collection' => 'news',
-          'limit' => 25,
-          'title' => 'Aktuell',
-          'width' => 50,
-          'sort' => 'order',
-        ], 
     ],
 
     /*
