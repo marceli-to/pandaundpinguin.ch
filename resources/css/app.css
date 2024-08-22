@@ -32,11 +32,11 @@ main li:not(main nav li) {
 
 /* Text */
 h1 {
-  @apply text-sm xs:text-lg md:text-4xl xl:text-5xl mb-20 md:mb-40 xl:mb-60;
+  @apply text-sm xs:text-lg md:text-3xl xl:text-5xl mb-20 md:mb-40 xl:mb-60;
 }
 
 h2 {
-  @apply text-lg md:text-4xl xl:text-5xl;
+  @apply text-lg md:text-3xl xl:text-5xl;
 }
 
 h3 {
@@ -67,15 +67,39 @@ em, i {
 }
 
 .text-large {
-  @apply text-sm xs:text-lg md:text-4xl xl:text-5xl
+  @apply text-sm xs:text-lg md:text-3xl xl:text-5xl
+}
+
+.text-large p {
+  @apply text-balance
 }
 
 .text-small {
   @apply text-sm md:text-md xl:text-lg
 }
 
-.text-large p {
-  @apply text-balance
+.top-left,
+.center-left,
+.bottom-left {
+  @apply md:absolute
+}
+
+.top-left,
+.center-left,
+.bottom-left {
+  @apply left-0
+}
+
+.top-left {
+  @apply md:top-75
+}
+
+.bottom-left {
+  @apply md:bottom-75
+}
+
+.center-left {
+  @apply md:top-1/2 md:-translate-y-1/2
 }
 
 /* Page specific classes */

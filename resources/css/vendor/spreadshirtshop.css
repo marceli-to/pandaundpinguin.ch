@@ -19,7 +19,10 @@ body.page-shop:has(.sprd-burgermenu--open) > header {
   @apply hidden
 }
 
-.SprdMain,
-.SprdMain footer {
+.SprdMain {
   @apply px-15 !max-w-[1536px] !mx-auto
+}
+
+.SprdMain footer {
+  @apply !max-w-[1536px] !mx-auto
 }

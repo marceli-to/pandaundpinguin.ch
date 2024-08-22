@@ -1,1 +1,45 @@
-{{ title }}
+
+{{ elements }}
+  {{ if type == 'main_image' }}
+    {{ partial:layout/inner class="!mb-0" }}
+      <div class="relative pt-80 md:py-40">
+        <h1 class="mb-25 md:hidden">
+          {{ title }}
+        </h1>
+        {{ partial:components/media/image 
+          :image="main_image"
+          :sizes="['md','lg', 'xl', '2xl']" 
+          class="w-full h-full max-w-screen max-h-screen md:max-h-[calc(100vh_-_80px)] object-contain"
+          wrapperClass="flex justify-center md:pt-0 md:items-center md:h-[calc(100vh_-_80px)]" }}
+        <h1 class="hidden md:block mt-30 sm:mt-0 !mb-0 {{ title_position }}">
+          {{ multiline_title ? multiline_title | nl2br : title }}
+        </h1>
+      </div>
+    {{ /partial:layout/inner }}
+  {{ /if }}
+
+  {{ if type == 'main_text' }}
+    <div class="bg-white">
+      {{ partial:layout/inner class="!mb-0 py-25 md:py-35 xl:py-50" }}
+        {{ partial:layout/article class="max-w-inner" }}
+          {{ text }}
+        {{ /partial:layout/article }}
+      {{ /partial:layout/inner }}
+    </div>
+  {{ /if }}
+
+  {{ if type == 'single_image' }}
+    <div class="{{ !background ? 'bg-white' : '' }}">
+      {{ partial:layout/inner class="!mb-0" }}
+        <div class="py-40">
+          {{ partial:components/media/image 
+            :image="single_image"
+            :sizes="['md','lg', 'xl', '2xl']" 
+            class="w-full h-full max-w-screen max-h-screen md:max-h-[calc(100vh_-_80px)] object-contain"
+            wrapperClass="flex justify-center md:pt-0 md:items-center md:h-[calc(100vh_-_80px)]" }}
+        </div>
+      {{ /partial:layout/inner }}
+    </div>
+  {{ /if }} 
+
+{{ /elements }}

@@ -23,7 +23,9 @@
 {{ /if }}
 
 {{ if type == 'team' }}
-  {{ partial:components/team/wrapper }}
+  {{ team_member }}
+    {{ partial:components/team/member }}
+  {{ /team_member}}
 {{ /if }}
 
 {{ if type == 'shop' }}
