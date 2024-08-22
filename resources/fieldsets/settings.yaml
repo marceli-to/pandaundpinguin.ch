@@ -7,6 +7,7 @@ fields:
         page-privacy: Datenschutz
         page-imprint: Impressum
         page-team: Team
+        page-shop: Shop
       type: select
       display: 'Seiten CSS-Klasse'
   -

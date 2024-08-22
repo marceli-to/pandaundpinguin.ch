@@ -1,0 +1,25 @@
+body.page-shop > div > svg {
+  @apply hidden
+}
+
+body.page-shop {
+  @apply pt-50 md:pt-0 leading-6
+}
+
+body.page-shop h1, 
+body.page-shop h2 {
+  @apply text-md lg:text-lg my-20
+}
+
+body.page-shop > header {
+  @apply bg-white bg-opacity-100
+}
+
+body.page-shop:has(.sprd-burgermenu--open) > header {
+  @apply hidden
+}
+
+.SprdMain,
+.SprdMain footer {
+  @apply px-15 !max-w-[1536px] !mx-auto
+}

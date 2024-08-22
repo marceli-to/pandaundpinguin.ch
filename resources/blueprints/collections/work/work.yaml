@@ -25,6 +25,12 @@ tabs:
               display: Vorschaubild
               instructions: 'Vorschaubild für Hompage-Teaser und Projekt-Übersichtsseite'
               folder: work
+          -
+            handle: page_class
+            field:
+              default: page-work
+              type: hidden
+              display: 'Seiten CSS'
   sidebar:
     display: Sidebar
     sections:

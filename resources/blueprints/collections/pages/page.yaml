@@ -74,6 +74,12 @@ tabs:
                       fields:
                         -
                           import: team
+                    shop:
+                      display: Shop
+                      icon: shopping-cart
+                      fields:
+                        -
+                          import: shop
   seo:
     display: SEO
     sections:
