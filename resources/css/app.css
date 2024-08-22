@@ -17,15 +17,15 @@ main p:last-child {
   @apply mb-0;
 }
 
-main ul {
+main ul:not(main nav ul) {
   @apply list-disc m-0 ml-16;
 }
 
-main ul p {
+main ul:not(main nav ul) p {
   @apply mb-0 inline;
 }
 
-main li {
+main li:not(main nav li) {
   @apply mb-4
 }
 
@@ -75,7 +75,7 @@ em, i {
 }
 
 .text-large p {
-  @apply text-pretty
+  @apply text-balance
 }
 
 body.page-team main {

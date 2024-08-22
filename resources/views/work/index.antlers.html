@@ -1,9 +1,43 @@
-{{ page_elements }}
-  {{ if type == 'editor' }}
-    {{ partial:layout/inner }}
-      {{ partial:layout/article class="max-w-inner" }}
-        {{ editor }}
-      {{ /partial:layout/article }}
-    {{ /partial:layout/inner }}
+{{ partial:layout/inner class="mb-20 md:mb-40 xl:mb-60 2xl:mb-60" }}
+
+  {{ if work_intro:text }}
+    {{ partial:layout/article class="max-w-inner" }}
+      {{ work_intro:text }}
+    {{ /partial:layout/article }}
   {{ /if }}
-{{ /page_elements }}
+
+  <nav class="sm:flex sm:space-x-15 mt-30 md:mt-60 xl:mt-80">
+    <h3 class="mb-5 sm:mb-0">Filter:</h3>
+    <ul class="flex flex-wrap">
+      <li class="block mb-10 mr-10 sm:mr-15">
+        <a 
+          class="hover:underline underline-offset-4 decoration-2 {{ !category ? 'underline' : '' }}"
+          href="/work">
+          Alle
+        </a>
+      </li>
+    {{ taxonomy:category }}
+      {{ if entries }}
+        <li class="block mb-10 mr-10 sm:mr-15">
+          <a 
+            class="text-nowrap hover:underline underline-offset-4 decoration-2 {{ category == slug ? 'underline' : '' }}"
+            href="/work/kategorie/{{ slug }}">
+            {{ title | replace(' ', '&nbsp;') }}
+          </a>
+        </li>
+      {{ /if }}
+    {{ /taxonomy:category }}
+    </ul>
+  </nav>
+
+{{ /partial:layout/inner }}
+
+{{ partial:layout/inner class="!px-0" }}
+  {{ collection from="work" as="work" sort="order" taxonomy:category="{{ category }}" }}
+    <div class="sm:grid sm:grid-cols-12">
+      {{ work }} 
+        {{ partial:work/teaser/item }}
+      {{ /work }}
+    </div>
+  {{ /collection }}
+{{ /partial:layout/inner }}

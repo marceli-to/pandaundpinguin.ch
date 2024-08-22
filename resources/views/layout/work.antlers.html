@@ -1,0 +1,18 @@
+{{ partial:layout/head }}
+
+{{ partial:layout/body }}
+
+  {{ slot:header }}
+    {{ partial:layout/header class="!bg-transparent !bg-opacity-0" }}
+  {{ /slot:header }}
+
+  {{ partial:layout/main class="!pt-0" }}
+
+  {{ slot:footer }}
+    {{ partial:layout/footer }}
+  {{ /slot:footer }}
+
+{{ /partial:layout/body }}
+
+</html>
+{{ partial:layout/credits }}
