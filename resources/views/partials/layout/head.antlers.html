@@ -14,7 +14,7 @@
 <meta name="twitter:card" content="summary">
 {{ if  open_graph_description }}<meta name="twitter:description" content="{{ open_graph_description }}">{{ else }}<meta name="twitter:description" content="{{ config.client.meta_description }}">{{ /if }}
 {{ if is_homepage }}<meta name="twitter:title" content="Panda & Pinguin – Storytelling. Strategie. Gestaltung">{{ else }}<meta name="twitter:title" content="{{ open_graph_title ?? title ?? site:name }} | Panda & Pinguin – Storytelling. Strategie. Gestaltung">{{ endif }}
-{{ if open_graph_image }}<meta property="twitter:image" content="{{ config.client.base_url }}{{ open_graph_image }}">{{ else }}<meta property="twitter:image" content="{{ config.client.base_url }}/opengraph.png">{{ /if }}
+{{ if open_graph_image }}<meta property="twitter:image" content="{{ config.client.base_url }}{{ open_graph_image }}">{{ else }}<meta property="twitter:image" content="{{ config.client.base_url }}/opengraph.jpg">{{ /if }}
 <meta name="csrf-token" content="{{ csrf_token }}">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
