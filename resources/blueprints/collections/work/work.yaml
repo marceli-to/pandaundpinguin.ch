@@ -60,31 +60,12 @@ tabs:
                           handle: title_position
                           field:
                             options:
-                              top-left: 'oben, links'
-                              top-right: 'oben, rechts'
-                              center-left: 'mitte, links'
-                              center-right: 'mitte, rechts'
-                              bottom-left: 'unten, links'
-                              bottom-right: 'unten, rechts'
+                              work-title-top: Oben
+                              work-title-center: Mitte
+                              work-title-bottom: Unten
                             default: top-left
                             type: select
                             display: 'Position Titel'
-                    main_text:
-                      display: Haupttext
-                      instructions: 'Haupttext hinzufügen'
-                      icon: text-formatting-all-caps
-                      fields:
-                        -
-                          handle: text
-                          field:
-                            buttons:
-                              - unorderedlist
-                              - removeformat
-                              - anchor
-                            toolbar_mode: floating
-                            remove_empty_nodes: true
-                            type: bard
-                            display: Text
                     single_image:
                       display: Einzelbild
                       instructions: 'Einzelbild hinzufügen'
@@ -110,6 +91,63 @@ tabs:
                           field:
                             type: textarea
                             display: Beschreibung
+                    grid_images:
+                      display: Bildraster
+                      instructions: 'Bildraster mit mehreren Bildern hinzufügen.'
+                      icon: dashboard-layout
+                      fields:
+                        -
+                          handle: element
+                          field:
+                            type: replicator
+                            display: Element
+                            sets:
+                              neue_set-gruppe:
+                                display: 'Neue Set-Gruppe'
+                                sets:
+                                  element:
+                                    display: Element
+                                    icon: text-formatting-image-top
+                                    fields:
+                                      -
+                                        handle: image
+                                        field:
+                                          max_files: 1
+                                          container: assets
+                                          folder: work
+                                          type: assets
+                                          display: Bild
+                                      -
+                                        handle: caption
+                                        field:
+                                          type: textarea
+                                          display: Text
+                                      -
+                                        handle: text_position
+                                        field:
+                                          options:
+                                            work-text-top: Oben
+                                            work-text-center: Mitte
+                                            work-text-bottom: Unten
+                                          default: work-text-top
+                                          type: select
+                                          display: 'Position Text'
+                    main_text:
+                      display: Haupttext
+                      instructions: 'Haupttext hinzufügen'
+                      icon: text-formatting-all-caps
+                      fields:
+                        -
+                          handle: text
+                          field:
+                            buttons:
+                              - unorderedlist
+                              - removeformat
+                              - anchor
+                            toolbar_mode: floating
+                            remove_empty_nodes: true
+                            type: bard
+                            display: Text
   sidebar:
     display: Sidebar
     sections:

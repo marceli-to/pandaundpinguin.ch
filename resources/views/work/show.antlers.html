@@ -20,7 +20,7 @@
 
   {{ if type == 'main_text' }}
     <div class="bg-white">
-      {{ partial:layout/inner class="!mb-0 py-25 md:py-35 xl:py-50" }}
+      {{ partial:layout/inner class="!mb-0 py-20 md:py-40 xl:py-60" }}
         {{ partial:layout/article class="max-w-inner" }}
           {{ text }}
         {{ /partial:layout/article }}
@@ -31,15 +31,39 @@
   {{ if type == 'single_image' }}
     <div class="{{ !background ? 'bg-white' : '' }}">
       {{ partial:layout/inner class="!mb-0" }}
-        <div class="py-40">
+        <div class="py-40 lg:py-80">
           {{ partial:components/media/image 
             :image="single_image"
             :sizes="['md','lg', 'xl', '2xl']" 
-            class="w-full h-full max-w-screen max-h-screen md:max-h-[calc(100vh_-_80px)] object-contain"
-            wrapperClass="flex justify-center md:pt-0 md:items-center md:h-[calc(100vh_-_80px)]" }}
+            class="w-full h-auto max-w-screen max-h-screen object-contain"
+            wrapperClass="flex justify-center md:pt-0 lg:items-center]" }}
         </div>
+        {{ if caption }}
+          <div class="text-sm md:text-md xl:text-lg [&>p]:text-balance pb-20 md:pb-40 xl:pb-60 max-w-5xl xl:max-w-6xl">
+            {{ caption }}
+          </div>
+        {{ /if }}
       {{ /partial:layout/inner }}
     </div>
-  {{ /if }} 
+  {{ /if }}
+
+  {{ if type == 'grid_images' }}
+    <div class="sm:grid sm:grid-cols-12">
+      {{ element }}
+        <div class="sm:col-span-6 relative">
+          {{ partial:components/media/image 
+            :image="image" 
+            class="w-full h-auto object-cover"
+            :sizes="['md','lg', 'xl', '2xl']" }}
+
+            {{ if caption }}
+              <div class="text-sm md:text-md xl:text-lg [&>p]:text-balance {{ text_position }} {{ index % 2 == 0 ? 'work-text-left' : 'work-text-right' }}">
+                {{ caption}}
+              </div>
+            {{ /if }}
+        </div>
+      {{ /element }}
+    </div>
+  {{ /if }}
 
 {{ /elements }}

@@ -33,7 +33,7 @@ main li:not(main nav li) {
 /* Hover and touch */
 [data-teaser].has-touch img,
 [data-teaser]:hover img {
-  @apply opacity-20 scale-105 transition-all duration-700
+  @apply opacity-20 sm:scale-105 transition-all duration-700
 }
 
 [data-teaser].has-touch span,
@@ -94,28 +94,48 @@ em, i {
   @apply text-sm md:text-md xl:text-lg
 }
 
-.top-left,
-.center-left,
-.bottom-left {
-  @apply md:absolute
+.work-title-top,
+.work-title-center,
+.work-title-bottom {
+  @apply md:absolute md:left-0
 }
 
-.top-left,
-.center-left,
-.bottom-left {
-  @apply left-0
+.work-text-top,
+.work-text-center,
+.work-text-bottom {
+  @apply absolute left-0 px-25
 }
 
-.top-left {
-  @apply md:top-75
-}
-
-.bottom-left {
-  @apply md:bottom-75
-}
-
-.center-left {
+.work-title-center {
   @apply md:top-1/2 md:-translate-y-1/2
+}
+
+.work-text-center {
+  @apply top-1/2 -translate-y-1/2
+}
+
+.work-title-top {
+  @apply md:top-60 xl:top-80
+}
+
+.work-title-bottom {
+  @apply md:bottom-60 xl:bottom-80
+}
+
+.work-text-top {
+  @apply top-30 top-50
+}
+
+.work-text-bottom {
+  @apply bottom-30 xl:bottom-50
+}
+
+.work-text-left {
+  @apply 3xl:left-[calc(((100vw_-_1550px)_/_2))]
+}
+
+.work-text-right {
+  @apply px-25 md:px-50
 }
 
 /* Page specific classes */
