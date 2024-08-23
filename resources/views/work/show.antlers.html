@@ -1,4 +1,39 @@
 
+<style>
+  @keyframes fade-out {
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes image-transform {
+    to {
+      transform: translateX(100vw);
+    }
+  }
+
+  @keyframes header-transform {
+    to {
+      /* transform: translateX(-100vw);*/
+    }
+  }
+
+
+
+  @supports (animation-timeline: scroll()) {
+
+    .sda-header {
+      animation: header-transform linear both;
+      animation-timeline: scroll();
+      animation-range: 0 70%;
+    }
+    .sda-image {
+      animation: image-transform linear both;
+      animation-timeline: scroll();
+      animation-range: 0 70%;
+    }
+  }
+</style>
 {{ elements }}
   {{ if type == 'main_image' }}
     {{ partial:layout/inner class="!mb-0" }}
@@ -9,9 +44,9 @@
         {{ partial:components/media/image 
           :image="main_image"
           :sizes="['md','lg', 'xl', '2xl']" 
-          class="w-full h-full max-w-screen max-h-screen md:max-h-[calc(100vh_-_80px)] object-contain"
+          class="w-full h-full max-w-screen max-h-screen md:max-h-[calc(100vh_-_80px)] object-contain sda-image"
           wrapperClass="flex justify-center md:pt-0 md:items-center md:h-[calc(100vh_-_80px)]" }}
-        <h1 class="hidden md:block mt-30 sm:mt-0 !mb-0 {{ title_position }}">
+        <h1 class="hidden md:block mt-30 sm:mt-0 !mb-0 sda-header {{ title_position }}">
           {{ multiline_title ? multiline_title | nl2br : title }}
         </h1>
       </div>
