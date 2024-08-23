@@ -2,9 +2,16 @@
 
 {{ partial:layout/body }}
 
-  {{ slot:header }}
-    {{ partial:layout/header class="sm:relative" }}
-  {{ /slot:header }}
+<header class="bg-white bg-opacity-100 relative w-full h-auto md:pb-15 {{ class }}">
+  <div class="max-w-8xl mx-auto px-10 md:px-50 xl:px-75">
+    <a 
+      href="/"
+      title="Zurück zur Startseite"
+      class="block z-60">
+      {{ partial:icons/logo class="h-36 md:h-48 xl:h-60 w-auto block" }}
+    </a>
+  </div>
+</header>
 
   {{ partial:layout/main class="!pt-0" }}
 

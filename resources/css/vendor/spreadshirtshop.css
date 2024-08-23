@@ -3,7 +3,7 @@ body.page-shop > div > svg {
 }
 
 body.page-shop {
-  @apply pt-50 md:pt-0 leading-6
+  @apply pt-15 md:pt-25 leading-6
 }
 
 body.page-shop h1, 
@@ -11,16 +11,20 @@ body.page-shop h2 {
   @apply text-md lg:text-lg my-20
 }
 
-body.page-shop > header {
-  @apply bg-white bg-opacity-100
-}
-
 body.page-shop:has(.sprd-burgermenu--open) > header {
   @apply hidden
 }
 
-.SprdMain {
-  @apply px-15 !max-w-[1536px] !mx-auto
+.SprdMain .sprd-header__title {
+  @apply !opacity-0
+}
+
+.SprdMain .sprd-social-bar {
+  @apply !bg-white !hidden;
+}
+
+.SprdMain .sprd-header {
+  @apply lg:!pt-0;
 }
 
 .SprdMain footer {
