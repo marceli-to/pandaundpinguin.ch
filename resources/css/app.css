@@ -30,6 +30,22 @@ main li:not(main nav li) {
   @apply mb-4
 }
 
+/* Hover and touch */
+[data-teaser].has-touch img,
+[data-teaser]:hover img {
+  @apply opacity-20 scale-105 transition-all duration-700
+}
+
+[data-teaser].has-touch span,
+[data-teaser]:hover span {
+  @apply opacity-100 transition-opacity duration-300
+}
+
+[data-teaser].has-touch span h2,
+[data-teaser]:hover span h2 {
+  @apply opacity-100 transition-all duration-700 delay-300
+}
+
 /* Text */
 h1 {
   @apply text-sm xs:text-lg md:text-3xl xl:text-5xl mb-20 md:mb-40 xl:mb-60;
