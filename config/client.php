@@ -1,5 +1,5 @@
 <?php
 return [
   'base_url' => env('APP_URL'),
-  'meta_description' => 'Panda & Pinguin. Die neue Agentur für Storytelling und Strategie.'
+  'meta_description' => 'Wir machen Geschichten. Panda & Pinguin ist die Agentur für zeitgemässe Kommunikation.'
 ];
