@@ -31,6 +31,18 @@ main li:not(main nav li) {
 }
 
 /* Hover and touch */
+[data-teaser] img {
+  @apply transition-all duration-700
+}
+
+[data-teaser] span {
+  @apply duration-300
+}
+
+[data-teaser] span h2 {
+  @apply duration-700
+}
+
 [data-teaser].has-touch img,
 [data-teaser]:hover img {
   @apply sm:opacity-20 sm:scale-105 transition-all duration-700
