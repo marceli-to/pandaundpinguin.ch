@@ -23,7 +23,15 @@
         <a 
           href="/"
           title="Zurück zur Startseite"
-          class="hidden md:block">
+          {{ if is_homepage }}
+          class="hidden md:block transition-opacity duration-700 opacity-0"
+          :class="{ 'opacity-0': !hasScrolled, 'opacity-100': hasScrolled }"
+          x-data="{ hasScrolled: false }"
+          x-init="window.addEventListener('scroll', () => { hasScrolled = window.pageYOffset > 200 })"
+          {{ else }}
+          class="hidden md:block"
+          {{ /if }}
+        >
           {{ partial:icons/logo class="md:h-36 xl:h-48 w-auto block" }}
         </a>
       </li>
