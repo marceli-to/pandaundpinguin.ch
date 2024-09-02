@@ -1,48 +1,18 @@
 
 <style>
-  @keyframes fade-out {
-    to {
-      opacity: 0;
-    }
-  }
 
-  @keyframes image-transform {
-    to {
-      transform: translateX(100vw);
-    }
-  }
-
-  @keyframes header-transform {
-    to {
-      /* transform: translateX(-100vw);*/
-    }
-  }
-
-  @keyframes slide-fade-in {
+  @keyframes scale-fade-in {
     from {
-      opacity: 0;
-      transform: scale(0) translateY(15vh);
+      opacity: 0.5;
+      transform: scale(.8);
     }
   }
-
 
   @supports (animation-timeline: view()) {
-
-    .sda-header {
-      animation: header-transform linear both;
-      animation-timeline: scroll();
-      animation-range: 0 70%;
-    }
     .sda-image {
-      /*
-      animation: image-transform linear both;
-      animation-timeline: view();
-      animation-range: contain 0% contain 50%;
-      */
-      animation: slide-fade-in linear both;
+      animation: scale-fade-in linear both;
       animation-timeline: view();
       animation-range: entry 0% entry 100%;
-
     }
   }
 </style>
@@ -58,7 +28,7 @@
           :sizes="['md','lg', 'xl', '2xl']" 
           class="w-full h-full max-w-screen max-h-screen md:max-h-[calc(100vh_-_80px)] object-contain sda-image"
           wrapperClass="flex justify-center md:pt-0 md:items-center md:h-[calc(100vh_-_80px)]" }}
-        <h1 class="hidden md:block mt-30 sm:mt-0 !mb-0 sda-header {{ title_position }}">
+        <h1 class="hidden md:block mt-30 sm:mt-0 !mb-0 {{ title_position }}">
           {{ multiline_title ? multiline_title | nl2br : title }}
         </h1>
       </div>
@@ -95,7 +65,7 @@
   {{ /if }}
 
   {{ if type == 'grid_images' }}
-    <div class="sm:grid sm:grid-cols-12">
+    <div class="bg-white sm:grid sm:grid-cols-12">
       {{ element }}
         <div class="sm:col-span-6 relative">
           {{ partial:components/media/image 
@@ -104,7 +74,7 @@
             :sizes="['md','lg', 'xl', '2xl']" }}
 
             {{ if caption }}
-              <div class="text-sm md:text-md xl:text-lg [&>p]:text-balance {{ text_position }} {{ index % 2 == 0 ? 'work-text-left' : 'work-text-right' }}">
+              <div class="text-sm md:text-md xl:text-lg [&>p]:text-balance sda-text {{ text_position }} {{ index % 2 == 0 ? 'work-text-left' : 'work-text-right' }}">
                 {{ caption}}
               </div>
             {{ /if }}
