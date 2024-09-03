@@ -58,9 +58,8 @@ h2 {
 }
 
 .text-small {
-  @apply text-xs sm:text-sm md:text-md xl:text-lg
+  @apply text-xs sm:text-sm md:text-md xl:text-lg leading-[1.1]
 }
-
 
 /* Helpers */
 .nobr {
@@ -71,7 +70,7 @@ h2 {
   @apply max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl;
 }
 
-/* Them3 */
+/* Themes */
 .theme-rose {
   @apply bg-rose;
 }
