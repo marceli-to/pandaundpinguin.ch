@@ -1,0 +1,14 @@
+@keyframes scale-fade-in {
+  from {
+    opacity: 0.5;
+    transform: scale(.8);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .scroll-scale-fade-in {
+    animation: scale-fade-in linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 100%;
+  }
+}

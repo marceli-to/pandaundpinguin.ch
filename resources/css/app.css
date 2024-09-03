@@ -1,4 +1,5 @@
 @import "typo/webfonts.css";
+@import "components/scroll-driven-animations.css";
 @import "vendor/spreadshirtshop.css";
 
 @tailwind base;
@@ -153,7 +154,7 @@ h2 {
 }
 
 .work-text-right {
-  @apply pr-25 md:pr-50 xl:pl-90
+  @apply pr-25 md:pr-50 xl:pl-70
 }
 
 /* Page specific classes */
