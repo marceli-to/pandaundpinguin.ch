@@ -148,6 +148,21 @@ tabs:
                             remove_empty_nodes: true
                             type: bard
                             display: Text
+                    quote:
+                      display: Zitat
+                      instructions: 'Zitat hinzufügen'
+                      icon: text-formatting-quotation
+                      fields:
+                        -
+                          handle: quote
+                          field:
+                            type: textarea
+                            display: Zitat
+                        -
+                          handle: author
+                          field:
+                            type: text
+                            display: Autor
   sidebar:
     display: Sidebar
     sections:

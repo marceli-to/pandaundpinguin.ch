@@ -102,6 +102,10 @@ em, i {
   @apply text-balance
 }
 
+.text-medium {
+  @apply text-xs sm:text-md md:text-xl xl:text-2xl
+}
+
 .text-small {
   @apply text-sm md:text-md xl:text-lg
 }

@@ -74,12 +74,29 @@
             :sizes="['md','lg', 'xl', '2xl']" }}
 
             {{ if caption }}
-              <div class="text-sm md:text-md xl:text-lg [&>p]:text-balance sda-text {{ text_position }} {{ index % 2 == 0 ? 'work-text-left' : 'work-text-right' }}">
+              <div class="text-sm md:text-md xl:text-lg [&>p]:text-balance {{ text_position }} {{ index % 2 == 0 ? 'work-text-left' : 'work-text-right' }}">
                 {{ caption}}
               </div>
             {{ /if }}
         </div>
       {{ /element }}
+    </div>
+  {{ /if }}
+
+  {{ if type == 'quote' }}
+    <div class="bg-white">
+    {{ partial:layout/inner class="bg-white !mb-0 py-20 md:py-40 xl:py-60" }}
+      {{ partial:layout/article class="max-w-inner" }}
+        <div class=" [&>p]:text-balance">
+          &laquo;{{ quote }}&raquo;
+        </div>
+        {{ if author }}
+          <div class="mt-20">
+            {{ author }}
+          </div>
+        {{ /if }}
+        {{ /partial:layout/article }}
+      {{ /partial:layout/inner }}
     </div>
   {{ /if }}
 
