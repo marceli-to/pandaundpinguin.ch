@@ -24,19 +24,19 @@
 
 {{ if type == 'team' }}
   {{ team_member }}
-    {{ partial:components/team/member }}
+    {{ partial:components/misc/team-member }}
   {{ /team_member}}
 {{ /if }}
 
 {{ if type == 'shop' }}
-<div id="myshop"></div>
-<script>
-  var spread_shop_config= {
-    "shopName" : "pandapinguin",
-    "locale" : "de_DE",
-    "prefix" : "//shop.spreadshirt.ch",
-    "baseId" : "myshop"
-};
-</script> 
-<script type="text/javascript" src="//shop.spreadshirt.ch/shopfiles/shopclient/shopclient.nocache.js"></script>
+  <div id="myshop"></div>
+  <script>
+    var spread_shop_config= {
+      "shopName" : "pandapinguin",
+      "locale" : "de_DE",
+      "prefix" : "//shop.spreadshirt.ch",
+      "baseId" : "myshop"
+  };
+  </script> 
+  <script type="text/javascript" src="//shop.spreadshirt.ch/shopfiles/shopclient/shopclient.nocache.js"></script>
 {{ /if }}

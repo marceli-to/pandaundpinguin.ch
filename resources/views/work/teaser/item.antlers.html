@@ -3,13 +3,16 @@
   class="block relative sm:col-span-6 overflow-hidden"
   style="background-color: {{ theme }}"
   data-teaser>
+
   {{ partial:components/media/image 
     :image="preview_image" 
     class="w-full h-auto object-cover"
     preset="focal-4-3" }}
+
   <span class="bg-white sm:bg-transparent w-full sm:text-center sm:absolute inset-0 flex sm:justify-center items-center sm:opacity-0">
-    <h2 class="text-sm xs:text-md md:text-xl xl:text-3xl sm:opacity-0 {{ !is_homepage ? 'pl-25' : '' }} pt-10 pb-20 md:pb-40 xs:pl-25 sm:px-30 xl:p-50">
+    <h2 class="text-sm xs:text-md md:text-xl xl:text-2xl sm:opacity-0 {{ !is_homepage ? 'pl-25' : '' }} pt-10 pb-20 md:pb-40 xs:pl-25 sm:px-30 xl:p-50">
       {{ title }}
     </h2>
   </span>
+  
 </a>

@@ -37,7 +37,7 @@
 
   {{ if type == 'main_text' }}
     <div class="bg-white">
-      {{ partial:layout/inner class="!mb-0 py-20 md:py-40 xl:py-60" }}
+      {{ partial:layout/inner class="!mb-0 py-30 md:py-45 xl:py-60" }}
         {{ partial:layout/article class="max-w-inner" }}
           {{ text }}
         {{ /partial:layout/article }}
@@ -48,7 +48,7 @@
   {{ if type == 'single_image' }}
     <div class="{{ !background ? 'bg-white' : '' }}">
       {{ partial:layout/inner class="!mb-0" }}
-        <div class="py-40 lg:py-80">
+        <div class="py-30 md:py-45 xl:py-60">
           {{ partial:components/media/image 
             :image="single_image"
             :sizes="['md','lg', 'xl', '2xl']" 
@@ -56,7 +56,7 @@
             wrapperClass="flex justify-center md:pt-0 lg:items-center]" }}
         </div>
         {{ if caption }}
-          <div class="text-sm md:text-md xl:text-lg [&>p]:text-balance pb-20 md:pb-40 xl:pb-60 max-w-5xl xl:max-w-6xl">
+          <div class="text-medium pb-30 md:pb-45 xl:pb-60 max-w-5xl xl:max-w-6xl">
             {{ caption }}
           </div>
         {{ /if }}
@@ -74,7 +74,7 @@
             :sizes="['md','lg', 'xl', '2xl']" }}
 
             {{ if caption }}
-              <div class="text-sm md:text-md xl:text-lg [&>p]:text-balance {{ text_position }} {{ index % 2 == 0 ? 'work-text-left' : 'work-text-right' }}">
+              <div class="text-medium {{ text_position }} {{ index % 2 == 0 ? 'work-text-left' : 'work-text-right' }}">
                 {{ caption}}
               </div>
             {{ /if }}
@@ -85,13 +85,13 @@
 
   {{ if type == 'quote' }}
     <div class="bg-white">
-    {{ partial:layout/inner class="bg-white !mb-0 py-20 md:py-40 xl:py-60" }}
+    {{ partial:layout/inner class="bg-white !mb-0 py-30 md:py-45 xl:py-60" }}
       {{ partial:layout/article class="max-w-inner" }}
-        <div class=" [&>p]:text-balance">
+        <div class="text-large">
           &laquo;{{ quote }}&raquo;
         </div>
         {{ if author }}
-          <div class="mt-20">
+          <div class="text-small mt-15 xl:mt-30">
             {{ author }}
           </div>
         {{ /if }}

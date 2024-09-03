@@ -13,13 +13,13 @@
               {{ role }}
             </h2>
             {{ if email }}
-              <a href="mailto:{{ email }}" class="text-xs sm:text-sm md:text-md xl:text-lg block mt-10 md:mt-15 hover:underline underline-offset-8 decoration-2">
+              <a href="mailto:{{ email }}" class="text-small block mt-10 md:mt-15 hover:underline underline-offset-8 decoration-2">
                 {{ email }}
               </a>
             {{ /if }}
           </div>
         </div>
-        {{ partial:layout/article class="max-w-inner md:col-span-full mt-45 md:mt-70 xl:mt-95 [&>p]:text-pretty" }}
+        {{ partial:layout/article class="max-w-inner md:col-span-full mt-45 md:mt-70 xl:mt-95" }}
           {{ text }}
         {{ /partial:layout/article }}
     </div>

@@ -1,4 +1,5 @@
-{{ partial:layout/inner class="" }}
+{{ partial:layout/inner }}
+
   {{ partial:layout/article class="max-w-inner" }}
     {{ editor }}
   {{ /partial:layout/article }}
@@ -6,15 +7,17 @@
   <h1 class="mt-20 md:mt-35 xl:mt-50 mb-20 md:mb-30 xl:mb-40">
     Unsere Projekte:
   </h1>
+
   <div class="sm:grid sm:grid-cols-12">
     {{ projects }}
       {{ partial:work/teaser/item }}
     {{ /projects }}
   </div>
+  
   <a 
     href="/work" 
     title="weitere Projekte"
-    class="block mt-15 md:mt-20 xl:mt-30 text-center text-sm md:text-md xl:text-lg hover:underline underline-offset-8 decoration-2">
+    class="block mt-15 md:mt-20 xl:mt-30 text-medium md:text-center hover:underline underline-offset-8 decoration-2">
     weitere Projekte
   </a>
 {{ /partial:layout/inner }}
