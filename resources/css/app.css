@@ -51,7 +51,7 @@ h2 {
 }
 
 .text-medium {
-  @apply text-sm sm:text-md lg:text-lg 2xl:text-xl;
+  @apply text-sm sm:text-md lg:text-lg 2xl:text-xl leading-[1.15];
 
   & p {
     @apply text-balance;

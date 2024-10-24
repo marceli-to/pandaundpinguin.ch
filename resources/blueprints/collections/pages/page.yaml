@@ -80,6 +80,13 @@ tabs:
                       fields:
                         -
                           import: shop
+                    accordion:
+                      display: Akkordeon
+                      instructions: 'Akkordeon hinzufügen'
+                      icon: form-drop-down-menu
+                      fields:
+                        -
+                          import: accordion
   seo:
     display: SEO
     sections:

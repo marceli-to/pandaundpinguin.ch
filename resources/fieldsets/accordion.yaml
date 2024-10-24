@@ -1,0 +1,50 @@
+title: Akkordeon
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Titel
+  -
+    handle: anchor
+    field:
+      type: text
+      display: Anker
+  -
+    handle: entries
+    field:
+      type: replicator
+      display: Einträge
+      sets:
+        accordion_entry:
+          display: 'Akkordeon Eintrag'
+          icon: form-drop-down-menu
+          sets:
+            accordion_entry:
+              display: 'Akkordeon Eintrag'
+              instructions: 'Akkorden Eintrag hinzufügen'
+              icon: form-drop-down-menu
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Titel
+                -
+                  handle: background_color
+                  field:
+                    type: color
+                    display: 'Hintergrund Farbe'
+                -
+                  handle: text
+                  field:
+                    buttons:
+                      - h3
+                      - unorderedlist
+                      - removeformat
+                      - anchor
+                      - text_medium
+                    toolbar_mode: floating
+                    remove_empty_nodes: true
+                    type: bard
+                    display: Text

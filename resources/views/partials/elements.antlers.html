@@ -28,6 +28,10 @@
   {{ /team_member}}
 {{ /if }}
 
+{{ if type == 'accordion' }}
+  {{ partial:components/misc/accordion }}
+{{ /if }}
+
 {{ if type == 'shop' }}
   <div id="myshop"></div>
   <script>
