@@ -7,7 +7,7 @@
   {{ if (preview_image:extension == 'gif') }}
     {{ partial:components/media/gif 
       :image="preview_image"
-      class="w-full h-auto object-cover aspect-4/3" }}
+      class="w-full h-auto object-cover aspect-[4/3]" }}
   {{ else }}
     {{ partial:components/media/image 
     :image="preview_image" 
