@@ -158,7 +158,7 @@ h2 {
 }
 
 /* Page specific classes */
-body.page-team header,
+/* body.page-team header,
 body.page-work header {
   @apply bg-transparent
 }
@@ -166,4 +166,16 @@ body.page-work header {
 body.page-team main,
 body.page-work main {
   @apply !pt-0;
+} */
+
+body.page-team header {
+  @apply bg-transparent
 }
+
+body.page-team main {
+  @apply !pt-0;
+}
+
+body.page-work main {
+  @apply !pt-0;
+} 

@@ -10,6 +10,7 @@ fields:
         page-shop: Shop
       type: select
       display: 'Seiten CSS-Klasse'
+      clearable: true
   -
     handle: debug
     field:

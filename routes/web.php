@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::statamic('/work/kategorie/{category?}', 'work.index', [
+Route::statamic('/arbeiten/kategorie/{category?}', 'work.index', [
   'layout' => 'layout.default',
   'title' => 'Work',
 ]);

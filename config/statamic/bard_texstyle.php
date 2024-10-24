@@ -13,15 +13,15 @@ return [
 
     'styles' => [
 
-        // 'title' => [
-        //     'type' => 'heading_1',
-        //     'name' => 'Title',
-        //     'ident' => 'T',
-        //     'icon' => null,
-        //     'class' => 'title',
-        //     'cp_css' => 'text-decoration: underline; text-underline-offset: 0.1em; text-decoration-color: #c5ccd4',
-        //     'cp_badge' => false,
-        // ],
+        'text_medium' => [
+            'type' => 'paragraph',
+            'name' => 'Small text',
+            'ident' => 'S',
+            'icon' => null,
+            'class' => 'text-medium',
+            'cp_css' => 'font-size: .875rem',
+            'cp_badge' => false,
+        ],
 
         'nobr' => [
           'type' => 'span',

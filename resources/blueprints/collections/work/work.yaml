@@ -37,8 +37,8 @@ tabs:
                   icon: addon-boxes-stack
                   sets:
                     main_image:
-                      display: Hauptbild
-                      instructions: 'Hauptbild hinzufügen'
+                      display: Bild/Titel
+                      instructions: 'Bild mit Titel hinzufügen'
                       icon: media-image-picture-orientation
                       fields:
                         -
@@ -48,8 +48,8 @@ tabs:
                             container: assets
                             folder: work
                             type: assets
-                            display: Titelbild
-                            instructions: 'Titelbild mit optionalem Titel hinzufügen.'
+                            display: Bild
+                            instructions: 'Bild hinzufügen.'
                         -
                           handle: multiline_title
                           field:
@@ -133,8 +133,8 @@ tabs:
                                           type: select
                                           display: 'Position Text'
                     main_text:
-                      display: Haupttext
-                      instructions: 'Haupttext hinzufügen'
+                      display: Text
+                      instructions: 'Text hinzufügen'
                       icon: text-formatting-all-caps
                       fields:
                         -
@@ -144,6 +144,7 @@ tabs:
                               - unorderedlist
                               - removeformat
                               - anchor
+                              - text_medium
                             toolbar_mode: floating
                             remove_empty_nodes: true
                             type: bard

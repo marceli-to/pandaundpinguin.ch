@@ -31,11 +31,18 @@
     <div class="{{ !background ? 'bg-white' : '' }}">
       {{ partial:layout/inner class="!mb-0" }}
         <div class="py-30 md:py-45 xl:py-60">
-          {{ partial:components/media/image 
-            :image="single_image"
-            :sizes="['md','lg', 'xl', '2xl']" 
-            class="w-full h-auto max-w-screen max-h-screen object-contain scroll-scale-fade-in"
-            wrapperClass="flex justify-center md:pt-0 lg:items-center]" }}
+          {{ if (single_image:extension == 'gif') }}
+            {{ partial:components/media/gif
+              :image="single_image"
+              class="w-full h-auto max-w-screen max-h-screen object-contain scroll-scale-fade-in"
+              wrapperClass="flex justify-center md:pt-0 lg:items-center" }} 
+          {{ else }}
+            {{ partial:components/media/image 
+              :image="single_image"
+              :sizes="['md','lg', 'xl', '2xl']" 
+              class="w-full h-auto max-w-screen max-h-screen object-contain scroll-scale-fade-in"
+              wrapperClass="flex justify-center md:pt-0 lg:items-center" }}
+          {{ /if }}
         </div>
         {{ if caption }}
           <div class="text-small xl:text-xl pb-30 md:pb-45 xl:pb-60 max-w-5xl xl:max-w-6xl">
@@ -66,6 +73,7 @@
   {{ /if }}
 
   {{ if type == 'quote' }}
+  
     <div class="bg-white">
     {{ partial:layout/inner class="bg-white !mb-0 py-30 md:py-45 xl:py-60" }}
       {{ partial:layout/article class="max-w-inner" }}
