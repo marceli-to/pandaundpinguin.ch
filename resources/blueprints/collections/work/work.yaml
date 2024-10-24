@@ -37,7 +37,7 @@ tabs:
                   icon: addon-boxes-stack
                   sets:
                     main_image:
-                      display: Bild/Titel
+                      display: Bild/Titel (Intro)
                       instructions: 'Bild mit Titel hinzufügen'
                       icon: media-image-picture-orientation
                       fields:
