@@ -1,0 +1,24 @@
+{{ collection from="work" as="work" }}
+  {{ if work }}
+    <div class="text-white bg-black">
+      {{ partial:layout/inner class="!mb-0 py-15 md:py-25 md:!px-25 xl:py-35" }}
+        <div class="flex justify-between">
+          {{ work }} 
+            {{ if id == current }}
+              <a 
+                href="{{ prev:url }}"
+                class="hover:underline decoration-2 underline-offset-4 {{ !prev ? 'opacity-30 pointer-events-none' : '' }}">
+                Vorheriges Projekt
+              </a>
+              <a 
+                href="{{ next:url }}"
+                class="hover:underline decoration-2 underline-offset-4 {{ !next ? 'opacity-30 pointer-events-none' : '' }}">
+                Nächstes Projekt
+              </a>
+            {{ /if }}
+          {{ /work }}
+        </div>
+      {{ /partial:layout/inner }}
+    </div>
+  {{ /if }}
+{{ /collection }}
