@@ -30,3 +30,11 @@ body.page-shop:has(.sprd-burgermenu--open) > header {
 .SprdMain footer {
   @apply !max-w-[1536px] !mx-auto
 }
+
+.SprdMain .sprd-startpage-teaser__caption:after {
+  @apply mt-15 !h-8
+}
+
+.sprd-startpage-about-us__caption.sprd__caption {
+  @apply !mb-10 xl:!mb-20
+}
