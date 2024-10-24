@@ -66,6 +66,22 @@ tabs:
                             default: top-left
                             type: select
                             display: 'Position Titel'
+                    intro_text:
+                      display: 'Titel/Text (Intro)'
+                      instructions: 'Titel und Text hinzufügen'
+                      icon: text-formatting-all-caps
+                      fields:
+                        -
+                          handle: text
+                          field:
+                            buttons:
+                              - unorderedlist
+                              - removeformat
+                              - h1
+                              - text_medium
+                            remove_empty_nodes: false
+                            type: bard
+                            display: Text
                     single_image:
                       display: Einzelbild
                       instructions: 'Einzelbild hinzufügen'
