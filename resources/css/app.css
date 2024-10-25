@@ -19,6 +19,14 @@ main p:last-child {
   @apply mb-0;
 }
 
+main a:not(main nav a) {
+  @apply underline underline-offset-4 decoration-2 hover:no-underline;
+}
+
+main .text-large a {
+  @apply underline underline-offset-8 decoration-4 hover:no-underline;
+}
+
 main ul:not(main nav ul) {
   @apply list-disc m-0 ml-16;
 }
@@ -65,10 +73,6 @@ h2 {
 /* Helpers */
 .nobr {
   @apply whitespace-nowrap;
-}
-
-.max-w-inner {
-  @apply max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl;
 }
 
 /* Themes */

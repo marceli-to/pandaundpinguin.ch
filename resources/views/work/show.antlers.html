@@ -2,8 +2,8 @@
   {{ if type == 'intro_text' }}
     <div class="bg-white">
       {{ partial:layout/inner class="!mb-0 pt-80 md:pt-120 xl:pt-140 pb-30 md:pb-45 xl:pb-60" }}
-        {{ partial:layout/article class="max-w-inner" }}
-        <h1>{{ title }}</h1>
+        {{ partial:layout/article class="max-w-7xl" }}
+          <h1>{{ title }}</h1>
           {{ text }}
         {{ /partial:layout/article }}
       {{ /partial:layout/inner }}
@@ -31,7 +31,7 @@
   {{ if type == 'main_text' }}
     <div class="bg-white">
       {{ partial:layout/inner class="!mb-0 py-30 md:py-45 xl:py-60" }}
-        {{ partial:layout/article class="max-w-inner" }}
+        {{ partial:layout/article class="max-w-7xl" }}
           {{ text }}
         {{ /partial:layout/article }}
       {{ /partial:layout/inner }}
@@ -87,7 +87,7 @@
   
     <div class="bg-white">
     {{ partial:layout/inner class="bg-white !mb-0 py-30 md:py-45 xl:py-60" }}
-      {{ partial:layout/article class="max-w-inner" }}
+      {{ partial:layout/article class="max-w-7xl" }}
         <div class="text-large">
           &laquo;{{ quote }}&raquo;
         </div>

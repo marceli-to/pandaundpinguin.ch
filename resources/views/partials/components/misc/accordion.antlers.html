@@ -8,7 +8,7 @@
     {{ title }}
   </h2>
 
-  <div x-data="{ selected: null }" class="mt-30">
+  <div x-data="{ selected: null }">
     {{ entries }}
       <style>
         .accordion-item-{{ index }}:hover,
@@ -20,13 +20,13 @@
       <div 
         data-accordion-index="{{ index }}"
         :class="{ 'is-active': selected === {{ index }} }"
-        class="accordion-item-{{ index }} px-25 md:px-50 xl:px-75 pb-15 md:pb-30 xl:pb-45">
+        class="accordion-item-{{ index }} pb-15 md:pb-30 xl:pb-45">
         <button 
           type="button" 
           class="w-full text-left pt-15 md:pt-30 xl:pt-45"
           title="{{ title }}"
           @click="selected !== {{ index }} ? selected = {{ index }} : selected = null;">
-          <div class="text-large flex items-center justify-between pr-0 lg:pr-15 max-w-8xl mx-auto">
+          <div class="text-large mx-auto max-w-8xl px-25 md:px-50 xl:px-75">
             {{ title }}
           </div>
         </button>
@@ -34,7 +34,7 @@
           class="relative overflow-hidden max-h-0 max-w-8xl mx-auto transition-all duration-200"
           x-ref="container{{ index }}" 
           x-bind:style="selected == '{{ index }}' ? 'max-height: ' + $refs.container{{ index }}.scrollHeight + 'px;' : ''">
-          <div class="text-medium pt-10 xl:pt-20">
+          <div class="text-medium pt-10 xl:pt-20 px-25 md:px-50 xl:px-75">
             {{ text }}
           </div>
         </div>

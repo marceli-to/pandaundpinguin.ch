@@ -15,7 +15,7 @@
         {{ if contact:email }}
           <a 
             href="mailto:{{ contact:email }}"
-            class="hover:text-cerise transition-colors block"
+            class="hover:text-cerise transition-colors block !no-underline"
             title="Schreib uns!">
             {{ contact:email }}
           </a>
@@ -23,7 +23,7 @@
         {{ if contact:phone }}
           <a 
             href="tel:{{ contact:phone }}"
-            class="hover:text-cerise transition-colors block"
+            class="hover:text-cerise transition-colors block !no-underline"
             title="Ruf uns an!">
             {{ contact:phone }}
           </a>
@@ -33,7 +33,7 @@
             href="https://maps.app.goo.gl/UpCxfZ8wjA9FToMm9" 
             target="_blank" 
             rel="noopener noreferrer"
-            class="hover:text-cerise transition-colors block" 
+            class="hover:text-cerise transition-colors block !no-underline" 
             title="Komm vorbei!">
             {{ contact:address | nl2br }}
           </a>

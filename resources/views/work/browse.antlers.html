@@ -2,7 +2,7 @@
   {{ if work }}
     <div class="text-white bg-black">
       {{ partial:layout/inner class="!mb-0 py-15 md:py-25 md:!px-25 xl:py-35" }}
-        <div class="flex justify-between">
+        <nav class="flex justify-between">
           {{ work }} 
             {{ if id == current }}
               <a 
@@ -17,7 +17,7 @@
               </a>
             {{ /if }}
           {{ /work }}
-        </div>
+        </nav>
       {{ /partial:layout/inner }}
     </div>
   {{ /if }}
