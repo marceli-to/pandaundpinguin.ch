@@ -51,6 +51,12 @@ tabs:
                             display: Bild
                             instructions: 'Bild hinzufügen.'
                         -
+                          handle: fullscreen
+                          field:
+                            type: toggle
+                            display: Fullscreen
+                            instructions: 'Falls aktiv, wird füllt das Bild den kompletten Screen.'
+                        -
                           handle: multiline_title
                           field:
                             type: textarea
@@ -99,6 +105,7 @@ tabs:
                           field:
                             type: toggle
                             display: Fullscreen
+                            instructions: 'Falls aktiv, wird füllt das Bild den kompletten Screen.'
                         -
                           handle: single_image
                           field:

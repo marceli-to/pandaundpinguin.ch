@@ -11,21 +11,39 @@
   {{ /if }}
 
   {{ if type == 'main_image' }}
-    {{ partial:layout/inner class="!mb-0" }}
-      <div class="relative pt-80 md:py-40">
-        <h1 class="mb-25 md:hidden">
-          {{ title }}
-        </h1>
-        {{ partial:components/media/image 
-          :image="main_image"
-          :sizes="['md','lg', 'xl', '2xl']" 
-          class="w-full h-full max-w-screen max-h-screen md:max-h-[calc(100vh_-_80px)] object-contain scroll-scale-fade-in"
-          wrapperClass="flex justify-center md:pt-0 md:items-center md:h-[calc(100vh_-_80px)]" }}
+    {{ if fullscreen }}
+      {{ partial:components/media/image 
+        :image="main_image"
+        :sizes="['md','lg', 'xl', '2xl']" 
+        class="w-full h-full max-w-screen max-h-screen object-cover" }}
+        {{ partial:layout/inner class="!mb-0" }}
+        <div class="relative">
+          <h1 class="mb-25 md:hidden absolute left-0 bottom-0">
+            {{ multiline_title ? multiline_title | nl2br : title }}
+          </h1>
         <h1 class="hidden md:block mt-30 sm:mt-0 !mb-0 {{ title_position }}">
           {{ multiline_title ? multiline_title | nl2br : title }}
-        </h1>
-      </div>
-    {{ /partial:layout/inner }}
+          </h1>
+        </div>
+        {{ /partial:layout/inner }}
+    {{ else }}
+      {{ partial:layout/inner class="!mb-0" }}
+        <div class="relative pt-80 md:py-40">
+          <h1 class="mb-25 md:hidden">
+            {{ title }}
+          </h1>
+          {{ partial:components/media/image 
+            :image="main_image"
+            :sizes="['md','lg', 'xl', '2xl']" 
+            class="w-full h-full max-w-screen max-h-screen md:max-h-[calc(100vh_-_80px)] object-contain scroll-scale-fade-in"
+            wrapperClass="flex justify-center md:pt-0 md:items-center md:h-[calc(100vh_-_80px)]" }}
+          <h1 class="hidden md:block mt-30 sm:mt-0 !mb-0 {{ title_position }}">
+            {{ multiline_title ? multiline_title | nl2br : title }}
+          </h1>
+        </div>
+      {{ /partial:layout/inner }}
+    {{ /if }}
+
   {{ /if }}
 
   {{ if type == 'main_text' }}
