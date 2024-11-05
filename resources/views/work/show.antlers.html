@@ -39,29 +39,37 @@
   {{ /if }}
 
   {{ if type == 'single_image' }}
-    <div class="{{ !background ? 'bg-white' : '' }}">
-      {{ partial:layout/inner class="!mb-0" }}
-        <div class="py-30 md:py-45 xl:py-60">
-          {{ if (single_image:extension == 'gif') }}
-            {{ partial:components/media/gif
-              :image="single_image"
-              class="w-full h-auto max-w-screen max-h-screen object-contain scroll-scale-fade-in"
-              wrapperClass="flex justify-center md:pt-0 lg:items-center" }} 
-          {{ else }}
-            {{ partial:components/media/image 
-              :image="single_image"
-              :sizes="['md','lg', 'xl', '2xl']" 
-              class="w-full h-auto max-w-screen max-h-screen object-contain scroll-scale-fade-in"
-              wrapperClass="flex justify-center md:pt-0 lg:items-center" }}
-          {{ /if }}
-        </div>
-        {{ if caption }}
-          <div class="text-small xl:text-xl pb-30 md:pb-45 xl:pb-60 max-w-5xl xl:max-w-6xl">
-            {{ caption }}
+    {{ if fullscreen }}
+      {{ partial:components/media/image 
+        :image="single_image"
+        :sizes="['md','lg', 'xl', '2xl']" 
+        class="w-full h-full max-w-screen max-h-screen object-cover" }}
+    {{ else }}
+      <div class="{{ !background ? 'bg-white' : '' }}">
+        {{ partial:layout/inner class="!mb-0" }}
+          <div class="py-30 md:py-45 xl:py-60">
+            {{ if (single_image:extension == 'gif') }}
+              {{ partial:components/media/gif
+                :image="single_image"
+                class="w-full h-auto max-w-screen max-h-screen object-contain scroll-scale-fade-in"
+                wrapperClass="flex justify-center md:pt-0 lg:items-center" }} 
+            {{ else }}
+              {{ partial:components/media/image 
+                :image="single_image"
+                :sizes="['md','lg', 'xl', '2xl']" 
+                class="w-full h-auto max-w-screen max-h-screen object-contain scroll-scale-fade-in"
+                wrapperClass="flex justify-center md:pt-0 lg:items-center" }}
+            {{ /if }}
           </div>
-        {{ /if }}
-      {{ /partial:layout/inner }}
-    </div>
+          {{ if caption }}
+            <div class="text-small xl:text-xl pb-30 md:pb-45 xl:pb-60 max-w-5xl xl:max-w-6xl">
+              {{ caption }}
+            </div>
+          {{ /if }}
+        {{ /partial:layout/inner }}
+      </div>
+    {{ /if }}
+
   {{ /if }}
 
   {{ if type == 'grid_images' }}

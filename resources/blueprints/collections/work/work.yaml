@@ -37,7 +37,7 @@ tabs:
                   icon: addon-boxes-stack
                   sets:
                     main_image:
-                      display: Bild/Titel (Intro)
+                      display: 'Bild/Titel (Intro)'
                       instructions: 'Bild mit Titel hinzufügen'
                       icon: media-image-picture-orientation
                       fields:
@@ -94,6 +94,11 @@ tabs:
                             display: Hintergrund
                             instructions: 'Falls aktiv, wird der Hintergrund vom Projekt übernommen. Ansonsten ist dieser weiss.'
                             default: true
+                        -
+                          handle: fullscreen
+                          field:
+                            type: toggle
+                            display: Fullscreen
                         -
                           handle: single_image
                           field:
