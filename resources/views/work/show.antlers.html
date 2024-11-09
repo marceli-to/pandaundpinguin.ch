@@ -17,12 +17,12 @@
         :sizes="['md','lg', 'xl', '2xl']" 
         class="w-full h-full max-w-screen max-h-screen object-cover" }}
         {{ partial:layout/inner class="!mb-0" }}
-        <div class="relative">
+        <div class="relative bg-red-200">
           <h1 class="mb-25 md:hidden absolute left-0 bottom-0">
             {{ multiline_title ? multiline_title | nl2br : title }}
           </h1>
-        <h1 class="hidden md:block mt-30 sm:mt-0 !mb-0 {{ title_position }}">
-          {{ multiline_title ? multiline_title | nl2br : title }}
+          <h1 class="hidden md:block mt-30 sm:mt-0 !mb-0 {{ title_position }}">
+            {{ multiline_title ? multiline_title | nl2br : title }}
           </h1>
         </div>
         {{ /partial:layout/inner }}
