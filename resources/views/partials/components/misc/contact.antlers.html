@@ -38,7 +38,7 @@
             {{ contact:address | nl2br }}
           </a>
         {{ /if }}
-        <div class="flex gap-x-10 xl:gap-x-20 md:mt-15 xl:mt-30">
+        <div class="flex items-center gap-x-10 xl:gap-x-20 md:mt-15 xl:mt-30">
           {{ if social_media_accounts:instagram }}
             <a 
               href="{{ social_media_accounts:instagram }}"
@@ -54,7 +54,7 @@
               href="{{ social_media_accounts:linkedin }}"
               target="_blank" 
               rel="noopener noreferrer"
-              class="block w-36 xl:w-48 h-auto hover:text-cerise transition-colors" 
+              class="block w-32 xl:w-44 h-auto hover:text-cerise transition-colors" 
               title="Folge uns auf LinkedIn!">
               {{ partial:icons/linkedin class="w-full h-auto" }}
             </a>
