@@ -38,6 +38,26 @@
             {{ contact:address | nl2br }}
           </a>
         {{ /if }}
+        {{ if social_media_accounts:linkedin }}
+          <a 
+            href="{{ social_media_accounts:linkedin }}"
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="hover:text-cerise transition-colors block !no-underline" 
+            title="Folge uns auf LinkedIn!">
+            LinkedIn
+          </a>
+        {{ /if }}
+        {{ if social_media_accounts:instagram }}
+          <a 
+            href="{{ social_media_accounts:instagram }}"
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="hover:text-cerise transition-colors block !no-underline" 
+            title="Folge uns auf Instagram!">
+            Instagram
+          </a>
+        {{ /if }}
       </address>
       {{ if contact:imprint }}
         <div class="mt-40 md:mt-60 xl:mt-80 text-small [&_a]:!no-underline hover:[&_a]:text-cerise transition-colors">
