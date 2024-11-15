@@ -38,25 +38,25 @@
             {{ contact:address | nl2br }}
           </a>
         {{ /if }}
-        <div class="flex gap-10">
-          {{ if social_media_accounts:linkedin }}
-            <a 
-              href="{{ social_media_accounts:linkedin }}"
-              target="_blank" 
-              rel="noopener noreferrer"
-              class="hover:text-cerise transition-colors block !no-underline" 
-              title="Folge uns auf LinkedIn!">
-              {{ partial:icons/linkedin class="w-48 h-auto" }}
-            </a>
-          {{ /if }}
+        <div class="flex gap-x-15">
           {{ if social_media_accounts:instagram }}
             <a 
               href="{{ social_media_accounts:instagram }}"
               target="_blank" 
               rel="noopener noreferrer"
-              class="hover:text-cerise transition-colors block !no-underline" 
+              class="block w-48 h-auto" 
               title="Folge uns auf Instagram!">
               {{ partial:icons/instagram class="w-48 h-auto" }}
+            </a>
+          {{ /if }}
+          {{ if social_media_accounts:linkedin }}
+            <a 
+              href="{{ social_media_accounts:linkedin }}"
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="block w-48 h-auto" 
+              title="Folge uns auf LinkedIn!">
+              {{ partial:icons/linkedin class="w-48 h-auto" }}
             </a>
           {{ /if }}
         </div>
