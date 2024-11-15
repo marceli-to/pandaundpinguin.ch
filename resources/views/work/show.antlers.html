@@ -126,7 +126,18 @@
       {{ /partial:layout/inner }}
     </div>
   {{ /if }}
-
+  
+  {{ if type == 'video' }}
+  <div>
+    {{ partial:layout/inner class="!mb-0 py-30 md:py-45 xl:py-60" }}
+      {{ partial:layout/article class="max-w-7xl" }}
+        <video autoplay muted playsinline loop controls class="w-full h-full object-cover aspect-video">
+          <source src="{{ video_file }}" type="video/mp4">
+        </video>
+      {{ /partial:layout/article }}
+    {{ /partial:layout/inner }}
+  </div>
+  {{ /if }}
 {{ /elements }}
 
 {{ partial:work/browse current="{{ id }}" }}

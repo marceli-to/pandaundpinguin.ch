@@ -192,6 +192,19 @@ tabs:
                           field:
                             type: text
                             display: Autor
+                    video:
+                      display: Video
+                      instructions: 'Video hinzufügen'
+                      icon: media-webcam-video
+                      fields:
+                        -
+                          handle: video_file
+                          field:
+                            max_files: 1
+                            container: assets
+                            folder: work
+                            type: assets
+                            display: 'Video Datei'
   sidebar:
     display: Sidebar
     sections:
