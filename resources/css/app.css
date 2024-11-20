@@ -24,7 +24,7 @@ main a:not(main nav a) {
 }
 
 main .text-large a {
-  @apply underline underline-offset-8 decoration-4 hover:no-underline;
+  @apply underline underline-offset-2 decoration-2 lg:underline-offset-8 lg:decoration-4 hover:no-underline;
 }
 
 main ul:not(main nav ul) {
