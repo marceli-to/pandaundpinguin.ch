@@ -11,6 +11,14 @@ tabs:
               required: true
               validate:
                 - required
+  seo:
+    display: SEO
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            import: seo
   sidebar:
     display: Sidebar
     sections:

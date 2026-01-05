@@ -47,11 +47,11 @@ h1 {
 
 h1, 
 h2 {
-  @apply text-sm xs:text-lg md:text-2xl xl:text-3xl;
+  @apply text-sm xs:text-lg md:text-2xl 2xl:text-3xl;
 }
 
 .text-large {
-  @apply text-sm xs:text-lg md:text-2xl xl:text-3xl;
+  @apply text-sm xs:text-lg md:text-2xl 2xl:text-3xl;
 
   & p {
     @apply text-balance;
