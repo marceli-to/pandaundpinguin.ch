@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d0ae53b2912a259f52547a149d726e86",
+    "content-hash": "5e6e4b9450b1c3ffa4e6d93ad38656dd",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -2525,16 +2525,16 @@
         },
         {
             "name": "marceli-to/statamic-sync",
-            "version": "v0.3.0",
+            "version": "v0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/marceli-to/statamic-sync.git",
-                "reference": "9e8427805abad8c77ed519752ac4299c5b1fe35e"
+                "reference": "97c5918b63fa94f24dfc630561e371ff41868daa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/marceli-to/statamic-sync/zipball/9e8427805abad8c77ed519752ac4299c5b1fe35e",
-                "reference": "9e8427805abad8c77ed519752ac4299c5b1fe35e",
+                "url": "https://api.github.com/repos/marceli-to/statamic-sync/zipball/97c5918b63fa94f24dfc630561e371ff41868daa",
+                "reference": "97c5918b63fa94f24dfc630561e371ff41868daa",
                 "shasum": ""
             },
             "require": {
@@ -2567,9 +2567,9 @@
             "description": "Sync Statamic content and assets from remote environments to local.",
             "support": {
                 "issues": "https://github.com/marceli-to/statamic-sync/issues",
-                "source": "https://github.com/marceli-to/statamic-sync/tree/v0.3.0"
+                "source": "https://github.com/marceli-to/statamic-sync/tree/v0.4.0"
             },
-            "time": "2026-02-19T08:01:41+00:00"
+            "time": "2026-02-19T08:10:12+00:00"
         },
         {
             "name": "michelf/php-smartypants",
@@ -10297,7 +10297,7 @@
     "minimum-stability": "dev",
     "stability-flags": {},
     "prefer-stable": true,
-    "prefer-lowest": true,
+    "prefer-lowest": false,
     "platform": {
         "php": "^8.2"
     },
