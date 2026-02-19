@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5512f5819c7d77623e78577017576c75",
+    "content-hash": "a39783efe018374a1572cbd742d35495",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -2521,6 +2521,54 @@
                 }
             ],
             "time": "2025-01-27T12:07:53+00:00"
+        },
+        {
+            "name": "marceli-to/statamic-sync",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/marceli-to/statamic-sync.git",
+                "reference": "903bde08e9dfb00e826d97ddab854908f827ccf3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/marceli-to/statamic-sync/zipball/903bde08e9dfb00e826d97ddab854908f827ccf3",
+                "reference": "903bde08e9dfb00e826d97ddab854908f827ccf3",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^10.0|^11.0|^12.0",
+                "php": "^8.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "MarceliTo\\StatamicSync\\StatamicSyncServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MarceliTo\\StatamicSync\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "marceli-to",
+                    "email": "m@marceli.to"
+                }
+            ],
+            "description": "Sync Statamic content and assets from remote environments to local.",
+            "support": {
+                "issues": "https://github.com/marceli-to/statamic-sync/issues",
+                "source": "https://github.com/marceli-to/statamic-sync/tree/v0.1.0"
+            },
+            "time": "2026-02-19T07:36:04+00:00"
         },
         {
             "name": "michelf/php-smartypants",

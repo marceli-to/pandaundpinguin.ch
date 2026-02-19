@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(composer remove:*)",
+      "Bash(echo \"livewire in composer.json: $?\")",
+      "Bash(npm run build:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nRemove unused Livewire dependency\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)",
+      "Bash(php artisan statamic:version:*)",
+      "Bash(php:*)",
+      "Bash(git -C /Users/marceli.to/Jamon.digital/Webroot/pandaundpinguin.ch push)"
+    ]
+  }
+}
