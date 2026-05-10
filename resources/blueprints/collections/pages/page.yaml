@@ -87,6 +87,27 @@ tabs:
                       fields:
                         -
                           import: accordion
+                    title_text:
+                      display: 'Titel/Text'
+                      instructions: 'Titel und Text hinzufügen'
+                      icon: text-formatting-all-caps
+                      fields:
+                        -
+                          import: title_text
+                    single_image:
+                      display: Einzelbild
+                      instructions: 'Einzelbild hinzufügen'
+                      icon: media-image-picture-orientation
+                      fields:
+                        -
+                          import: single_image
+                    grid_image_teaser:
+                      display: 'Bildraster (Teaser)'
+                      instructions: 'Bildraster mit verlinkten Bildern (Teaser).'
+                      icon: dashboard-layout
+                      fields:
+                        -
+                          import: grid_image_teaser
   seo:
     display: SEO
     sections:

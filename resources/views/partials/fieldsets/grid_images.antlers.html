@@ -1,0 +1,16 @@
+<div class="bg-white sm:grid sm:grid-cols-12">
+  {{ element }}
+    <div class="sm:col-span-6 relative">
+      {{ partial:components/media/image
+        :image="image"
+        class="w-full h-auto object-cover"
+        :sizes="['md','lg', 'xl', '2xl']" }}
+
+        {{ if caption }}
+          <div class="text-small xl:text-xl {{ text_position }} {{ index % 2 == 0 ? 'work-text-left' : 'work-text-right' }}">
+            {{ caption}}
+          </div>
+        {{ /if }}
+    </div>
+  {{ /element }}
+</div>

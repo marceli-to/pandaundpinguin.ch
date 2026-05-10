@@ -1,0 +1,28 @@
+title: Einzelbild
+fields:
+  -
+    handle: background
+    field:
+      type: toggle
+      display: Hintergrund
+      instructions: 'Falls aktiv, wird der Hintergrund vom Projekt übernommen. Ansonsten ist dieser weiss.'
+      default: true
+  -
+    handle: fullscreen
+    field:
+      type: toggle
+      display: Fullscreen
+      instructions: 'Falls aktiv, füllt das Bild den kompletten Screen.'
+  -
+    handle: single_image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: Einzelbild
+  -
+    handle: caption
+    field:
+      type: textarea
+      display: Beschreibung
+      localizable: true

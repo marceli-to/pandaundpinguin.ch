@@ -1,0 +1,15 @@
+<div class="bg-white">
+  {{ if type == 'intro_text' }}
+    {{ partial:layout/inner class="!mb-0 pt-80 md:pt-120 xl:pt-140 pb-30 md:pb-45 xl:pb-60" }}
+      {{ partial:layout/article class="max-w-7xl" }}
+        {{ text }}
+      {{ /partial:layout/article }}
+    {{ /partial:layout/inner }}
+  {{ else }}
+    {{ partial:layout/inner class="mb-50 md:mb-75 xl:mb-100" }}
+      {{ partial:layout/article class="max-w-7xl text-small [&>h2]:mb-20 [&>h2]:xl:mb-30" }}
+        {{ text }}
+      {{ /partial:layout/article }}
+    {{ /partial:layout/inner }}
+  {{ /if }}
+</div>

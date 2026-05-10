@@ -51,6 +51,15 @@ tabs:
                             display: Bild
                             instructions: 'Bild hinzufügen.'
                         -
+                          handle: main_image_mobile
+                          field:
+                            max_files: 1
+                            container: assets
+                            folder: work
+                            type: assets
+                            display: 'Bild (Mobile)'
+                            instructions: 'Bild für mobile Ansichten hinzufügen.'
+                        -
                           handle: fullscreen
                           field:
                             type: toggle

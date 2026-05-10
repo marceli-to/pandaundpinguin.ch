@@ -1,0 +1,29 @@
+<div class="bg-white max-w-8xl mx-auto mb-50 md:mb-75 xl:mb-100 2xl:mb-150 px-25 md:px-50 xl:px-75">
+  {{ if section_title }}
+    <h2 class="mb-20 xl:mb-30">{{ section_title }}</h2>
+  {{ /if }}
+  <div class="sm:grid sm:grid-cols-12">
+  {{ items }}
+    <a
+      href="{{ url }}"
+      class="block relative sm:col-span-6 !overflow-hidden group no-underline"
+      data-teaser>
+      <div class="overflow-hidden">
+      {{ if (image:extension == 'gif') }}
+        {{ partial:components/media/gif
+          :image="image"
+          class="w-full h-auto object-cover aspect-[4/3] group-hover:opacity-80" }}
+      {{ else }}
+        {{ partial:components/media/image
+          :image="image"
+          class="w-full h-auto object-cover group-hover:opacity-80"
+          preset="focal-4-3" }}
+      {{ /if }}
+      </div>
+      <h3 class="text-small pt-15 group-hover:underline">
+        {{ title }}
+      </h3>
+    </a>
+  {{ /items }}
+  </div>
+</div>

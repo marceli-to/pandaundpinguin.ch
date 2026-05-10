@@ -1,0 +1,55 @@
+{{ if fullscreen }}
+  {{ if main_image_mobile }}
+    {{ partial:components/media/image
+      :image="main_image_mobile"
+      :sizes="['md','lg']"
+      class="w-full h-auto md:hidden" }}
+    {{ partial:layout/inner class="!mb-0 md:hidden" }}
+      <h1 class="mb-25 mt-30">
+        {{ multiline_title ? multiline_title | nl2br : title }}
+      </h1>
+    {{ /partial:layout/inner }}
+    {{ partial:components/media/image
+      :image="main_image"
+      :sizes="['md','lg', 'xl', '2xl']"
+      class="hidden md:!block w-full h-dvh lg:h-full absolute top-0 left-0 max-w-screen max-h-screen object-cover" }}
+    {{ partial:layout/inner class="!mb-0 hidden md:block" }}
+      <div class="relative min-h-dvh lg:min-h-screen">
+        <h1 class="mt-30 sm:mt-0 !mb-0 {{ title_position }}">
+          {{ multiline_title ? multiline_title | nl2br : title }}
+        </h1>
+      </div>
+    {{ /partial:layout/inner }}
+  {{ else }}
+    {{ partial:components/media/image
+      :image="main_image"
+      :sizes="['md','lg', 'xl', '2xl']"
+      class="w-full h-dvh lg:h-full absolute top-0 left-0 max-w-screen max-h-screen object-cover" }}
+    {{ partial:layout/inner class="!mb-0" }}
+      <div class="relative min-h-dvh lg:min-h-screen">
+        <h1 class="mb-25 md:hidden absolute left-0 bottom-0">
+          {{ multiline_title ? multiline_title | nl2br : title }}
+        </h1>
+        <h1 class="hidden md:block mt-30 sm:mt-0 !mb-0 {{ title_position }}">
+          {{ multiline_title ? multiline_title | nl2br : title }}
+        </h1>
+      </div>
+    {{ /partial:layout/inner }}
+  {{ /if }}
+{{ else }}
+  {{ partial:layout/inner class="!mb-0" }}
+    <div class="relative pt-80 md:py-40">
+      <h1 class="mb-25 md:hidden">
+        {{ multiline_title ? multiline_title | nl2br : title }}
+      </h1>
+      {{ partial:components/media/image
+        :image="main_image"
+        :sizes="['md','lg', 'xl', '2xl']"
+        class="w-full h-full max-w-screen max-h-screen md:max-h-[calc(100vh_-_80px)] object-contain scroll-scale-fade-in"
+        wrapperClass="flex justify-center md:pt-0 md:items-center md:h-[calc(100vh_-_80px)]" }}
+      <h1 class="hidden md:block mt-30 sm:mt-0 !mb-0 {{ title_position }}">
+        {{ multiline_title ? multiline_title | nl2br : title }}
+      </h1>
+    </div>
+  {{ /partial:layout/inner }}
+{{ /if }}

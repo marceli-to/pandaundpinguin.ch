@@ -1,0 +1,14 @@
+<div class="bg-white">
+{{ partial:layout/inner class="bg-white !mb-0 py-30 md:py-45 xl:py-60" }}
+  {{ partial:layout/article class="max-w-7xl" }}
+    <div class="text-large">
+      &laquo;{{ quote }}&raquo;
+    </div>
+    {{ if author }}
+      <div class="text-small xl:text-xl mt-15 xl:mt-30">
+        {{ author }}
+      </div>
+    {{ /if }}
+    {{ /partial:layout/article }}
+  {{ /partial:layout/inner }}
+</div>

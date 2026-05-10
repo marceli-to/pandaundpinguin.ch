@@ -7,7 +7,11 @@
 {{ /if }}
 
 {{ if type == 'video' }}
-  {{ partial:components/media/video }}
+  {{ if video_file }}
+    {{ partial:partials/fieldsets/video }}
+  {{ else }}
+    {{ partial:components/media/video }}
+  {{ /if }}
 {{ /if }}
 
 {{ if type == 'projects' }}
@@ -30,6 +34,34 @@
 
 {{ if type == 'accordion' }}
   {{ partial:components/misc/accordion }}
+{{ /if }}
+
+{{ if type == 'title_text' || type == 'intro_text' }}
+  {{ partial:partials/fieldsets/title_text }}
+{{ /if }}
+
+{{ if type == 'single_image' }}
+  {{ partial:partials/fieldsets/single_image }}
+{{ /if }}
+
+{{ if type == 'grid_images' }}
+  {{ partial:partials/fieldsets/grid_images }}
+{{ /if }}
+
+{{ if type == 'grid_image_teaser' }}
+  {{ partial:partials/fieldsets/grid_image_teaser }}
+{{ /if }}
+
+{{ if type == 'main_image' }}
+  {{ partial:partials/fieldsets/main_image }}
+{{ /if }}
+
+{{ if type == 'main_text' }}
+  {{ partial:partials/fieldsets/main_text }}
+{{ /if }}
+
+{{ if type == 'quote' }}
+  {{ partial:partials/fieldsets/quote }}
 {{ /if }}
 
 {{ if type == 'shop' }}

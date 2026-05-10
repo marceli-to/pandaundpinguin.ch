@@ -1,0 +1,38 @@
+title: Bildraster
+fields:
+  -
+    handle: element
+    field:
+      type: replicator
+      display: Element
+      sets:
+        neue_set-gruppe:
+          display: 'Neue Set-Gruppe'
+          sets:
+            element:
+              display: Element
+              icon: text-formatting-image-top
+              fields:
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Bild
+                -
+                  handle: caption
+                  field:
+                    type: textarea
+                    display: Text
+                    localizable: true
+                -
+                  handle: text_position
+                  field:
+                    options:
+                      work-text-top: Oben
+                      work-text-center: Mitte
+                      work-text-bottom: Unten
+                    default: work-text-top
+                    type: select
+                    display: 'Position Text'

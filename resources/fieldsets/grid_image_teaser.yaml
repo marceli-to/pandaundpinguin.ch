@@ -1,0 +1,45 @@
+title: 'Bildraster (Teaser)'
+fields:
+  -
+    handle: section_title
+    field:
+      type: text
+      display: Titel
+      localizable: true
+  -
+    handle: items
+    field:
+      type: replicator
+      display: Elemente
+      sets:
+        items:
+          display: Elemente
+          sets:
+            item:
+              display: Element
+              icon: text-formatting-image-top
+              fields:
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Bild
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Titel
+                    localizable: true
+                -
+                  handle: url
+                  field:
+                    type: link
+                    display: Link
+                    instructions: 'Interne Seite, externe URL, Asset oder E-Mail.'
+                    container: assets
+                    collections:
+                      - pages
+                      - work
+                    localizable: true
