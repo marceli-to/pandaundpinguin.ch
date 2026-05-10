@@ -1,7 +1,7 @@
 <div class="bg-white">
   {{ if type == 'intro_text' }}
     {{ partial:layout/inner class="!mb-0 md:pt-40 xl:pt-70 pb-30 md:pb-45 xl:pb-60" }}
-      {{ partial:layout/article class="max-w-7xl" }}
+      {{ partial:layout/article class="max-w-7xl [&>h1]:last:!mb-0" }}
         {{ text }}
       {{ /partial:layout/article }}
     {{ /partial:layout/inner }}
