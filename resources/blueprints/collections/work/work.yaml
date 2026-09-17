@@ -178,6 +178,8 @@ tabs:
                           handle: text
                           field:
                             buttons:
+                              - h1
+                              - h2
                               - unorderedlist
                               - removeformat
                               - anchor
@@ -214,6 +216,14 @@ tabs:
                             folder: work
                             type: assets
                             display: 'Video Datei'
+  seo:
+    display: SEO
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            import: seo
   sidebar:
     display: Sidebar
     sections:
