@@ -9,7 +9,7 @@
       <div class="py-30 md:py-45 xl:py-60">
         {{# Width capped by the image ratio at 100vh, so the caption lines up with the image edges #}}
         <div class="mx-auto" style="width: min(100%, calc(100vh * {{ single_image:width }} / {{ single_image:height }}))">
-          {{ if (single_image:extension == 'gif') }}
+          {{ if single_image:extension == 'gif' || single_image:is_video }}
             {{ partial:components/media/gif
               :image="single_image"
               class="w-full h-auto scroll-scale-fade-in" }}

@@ -4,7 +4,7 @@
   style="background-color: {{ theme }}"
   data-teaser>
 
-  {{ if (preview_image:extension == 'gif') }}
+  {{ if preview_image:extension == 'gif' || preview_image:is_video }}
     {{ partial:components/media/gif 
       :image="preview_image"
       class="w-full h-auto object-cover aspect-[4/3]" }}

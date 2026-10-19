@@ -96,7 +96,8 @@ h2 {
 }
 
 /* Hover and touch */
-[data-teaser] img {
+[data-teaser] img,
+[data-teaser] video {
   @apply transition-all duration-700
 }
 
@@ -109,7 +110,9 @@ h2 {
 }
 
 [data-teaser].has-touch img,
-[data-teaser]:hover img {
+[data-teaser].has-touch video,
+[data-teaser]:hover img,
+[data-teaser]:hover video {
   @apply sm:opacity-20 sm:scale-105 transition-all duration-700
 }
 

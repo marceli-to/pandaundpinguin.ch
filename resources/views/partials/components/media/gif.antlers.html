@@ -1,10 +1,20 @@
-<figure class="{{ wrapperClass }}">    
-  <img 
-    src="{{ image:url }}" 
-    alt="{{ alt ? alt : image:alt }}" 
-    title="{{ alt ? alt : image:alt }}" 
-    height="{{ image:height }}" 
-    width="{{ image:width }}"
-    class="block {{ class ?? '' }}"
-    loading="lazy">
+<figure class="{{ wrapperClass }}">
+  {{ if image:is_video }}
+    {{# Former GIFs, re-encoded as MP4: same looping behaviour, a fraction of the size #}}
+    <video
+      src="{{ image:url }}"
+      {{ if image:width }}width="{{ image:width }}" height="{{ image:height }}"{{ /if }}
+      class="block {{ class ?? '' }}"
+      autoplay muted loop playsinline disablepictureinpicture
+      aria-hidden="true"></video>
+  {{ else }}
+    <img
+      src="{{ image:url }}"
+      alt="{{ alt ? alt : image:alt }}"
+      title="{{ alt ? alt : image:alt }}"
+      height="{{ image:height }}"
+      width="{{ image:width }}"
+      class="block {{ class ?? '' }}"
+      loading="lazy">
+  {{ /if }}
 </figure>

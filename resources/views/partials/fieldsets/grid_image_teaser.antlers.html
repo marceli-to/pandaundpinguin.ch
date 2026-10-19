@@ -9,7 +9,7 @@
       class="block relative sm:col-span-6 !overflow-hidden group no-underline"
       data-teaser>
       <div class="overflow-hidden">
-      {{ if (image:extension == 'gif') }}
+      {{ if image:extension == 'gif' || image:is_video }}
         {{ partial:components/media/gif
           :image="image"
           class="w-full h-auto object-cover aspect-[4/3] group-hover:opacity-80" }}
