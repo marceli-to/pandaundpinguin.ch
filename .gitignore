@@ -26,4 +26,5 @@ content/
 public/assets
 resources/users
 users
-.well-known/public/img
+.well-known
+/public/img
