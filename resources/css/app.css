@@ -12,7 +12,8 @@ main {
   @apply flex-1;
 }
 
-main p {
+main article > p {
+  @apply mb-[0.75em];
 }
 
 main p:last-child {

@@ -7,24 +7,25 @@
   <div class="{{ !background ? 'bg-white' : '' }}">
     {{ partial:layout/inner class="!mb-0" }}
       <div class="py-30 md:py-45 xl:py-60">
-        {{ if (single_image:extension == 'gif') }}
-          {{ partial:components/media/gif
-            :image="single_image"
-            class="w-full h-auto max-w-screen max-h-screen object-contain scroll-scale-fade-in"
-            wrapperClass="flex justify-center md:pt-0 lg:items-center" }}
-        {{ else }}
-          {{ partial:components/media/image
-            :image="single_image"
-            :sizes="['md','lg', 'xl', '2xl']"
-            class="w-full h-auto max-w-screen max-h-screen object-contain scroll-scale-fade-in"
-            wrapperClass="flex justify-center md:pt-0 lg:items-center" }}
-        {{ /if }}
-      </div>
-      {{ if caption }}
-        <div class="text-small xl:text-xl pb-30 md:pb-45 xl:pb-60 max-w-5xl xl:max-w-6xl">
-          {{ caption }}
+        {{# Width capped by the image ratio at 100vh, so the caption lines up with the image edges #}}
+        <div class="mx-auto" style="width: min(100%, calc(100vh * {{ single_image:width }} / {{ single_image:height }}))">
+          {{ if (single_image:extension == 'gif') }}
+            {{ partial:components/media/gif
+              :image="single_image"
+              class="w-full h-auto scroll-scale-fade-in" }}
+          {{ else }}
+            {{ partial:components/media/image
+              :image="single_image"
+              :sizes="['md','lg', 'xl', '2xl']"
+              class="w-full h-auto scroll-scale-fade-in" }}
+          {{ /if }}
+          {{ if caption }}
+            <div class="text-small xl:text-xl mt-10 md:mt-15">
+              {{ caption }}
+            </div>
+          {{ /if }}
         </div>
-      {{ /if }}
+      </div>
     {{ /partial:layout/inner }}
   </div>
 {{ /if }}
