@@ -66,7 +66,7 @@ tabs:
                       display: Kontakt
                       instructions: 'Kontaktinformationen (globale Inhalte) hinzufügen'
                       icon: form-address-field
-                      fields: {  }
+                      fields: {}
                     team:
                       display: Team
                       instructions: 'Team hinzufügen'
@@ -88,7 +88,7 @@ tabs:
                         -
                           import: accordion
                     title_text:
-                      display: 'Titel/Text'
+                      display: Titel/Text
                       instructions: 'Titel und Text hinzufügen'
                       icon: text-formatting-all-caps
                       fields:
@@ -135,12 +135,3 @@ tabs:
               type: slug
               localizable: true
               validate: 'max:200'
-          -
-            handle: parent
-            field:
-              type: entries
-              collections:
-                - pages
-              max_items: 1
-              listable: false
-              localizable: true
