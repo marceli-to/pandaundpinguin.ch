@@ -7,7 +7,7 @@
         :sizes="['md','lg', 'xl', '2xl']" }}
 
         {{ if caption }}
-          <div class="text-small xl:text-xl {{ text_position }} {{ index % 2 == 0 ? 'work-text-left' : 'work-text-right' }}">
+          <div class="text-caption {{ text_position }} {{ index % 2 == 0 ? 'work-text-left' : 'work-text-right' }}">
             {{ caption}}
           </div>
         {{ /if }}

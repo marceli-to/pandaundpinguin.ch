@@ -42,17 +42,18 @@ main li:not(main nav li) {
 
 
 /* Text */
+/* From md up, sizes scale with viewport width and reach their max at 1920px */
 h1 {
   @apply mb-20 md:mb-40 xl:mb-60;
 }
 
 h1, 
 h2 {
-  @apply text-sm xs:text-lg md:text-2xl 2xl:text-3xl;
+  @apply text-sm xs:text-lg md:text-[length:clamp(1.875rem,3.333vw,4rem)];
 }
 
 .text-large {
-  @apply text-sm xs:text-lg md:text-2xl 2xl:text-3xl;
+  @apply text-sm xs:text-lg md:text-[length:clamp(1.875rem,3.333vw,4rem)];
 
   & p {
     @apply text-balance;
@@ -60,7 +61,7 @@ h2 {
 }
 
 .text-medium {
-  @apply text-sm sm:text-md lg:text-lg 2xl:text-xl leading-[1.15];
+  @apply text-sm sm:text-md md:text-[length:clamp(1.5rem,1.875vw,2.25rem)] leading-[1.15];
 
   & p {
     @apply text-balance;
@@ -68,7 +69,12 @@ h2 {
 }
 
 .text-small {
-  @apply text-xs sm:text-sm md:text-md xl:text-lg leading-[1.1]
+  @apply text-xs sm:text-sm md:text-[length:clamp(1.25rem,1.5625vw,1.875rem)] leading-[1.1]
+}
+
+/* Captions: small text, stepping up to medium size from xl */
+.text-caption {
+  @apply text-xs sm:text-sm md:text-[length:clamp(1.25rem,1.5625vw,1.875rem)] xl:text-[length:clamp(1.5rem,1.875vw,2.25rem)] leading-[1.1]
 }
 
 /* Helpers */
