@@ -12,7 +12,8 @@
     {{ partial:components/media/image 
     :image="preview_image" 
       class="w-full h-auto object-cover"
-      preset="focal-4-3" }}
+      preset="focal-4-3"
+      :sizes="['md','lg', 'xl', '2xl']" }}
   {{ /if }}
 
   <span class="bg-white sm:bg-transparent w-full sm:text-center sm:absolute inset-0 flex sm:justify-center items-center sm:opacity-0">
