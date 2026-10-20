@@ -167,7 +167,7 @@ return [
           'xl-focal-header-visual' => ['w' => 1440, 'h' => 480, 'q' => 90, 'fit' => 'crop_focal'],
           '2xl-focal-header-visual' => ['w' => 1800, 'h' => 600, 'q' => 90, 'fit' => 'crop_focal'],
           
-          'max_upload_size' => ['w' => 4000, 'h' => 4000, 'fit' => 'max'],
+          'max_upload_size' => ['w' => 2400, 'h' => 2400, 'fit' => 'max'],
 
         ],
 
