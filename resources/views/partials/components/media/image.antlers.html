@@ -1,5 +1,8 @@
 <figure class="{{ wrapperClass }}">
   <picture>
+    {{# Blank out the variant hidden by CSS at this width, so eager loading doesn't fetch it #}}
+    {{ if blankFrom }}<source media="(min-width: {{ blankFrom }})" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">{{ /if }}
+    {{ if blankBelow }}<source media="(max-width: {{ blankBelow }})" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">{{ /if }}
     {{ if (sizes | in_array('2xl')) }}
       <source media="(min-width: 1280px)" srcset="{{ glide:image preset="{{ preset ? '2xl-{{ preset }}-webp' : '2xl-webp' }}" }} 1x, {{ glide:image preset="{{ preset ? '2xl-{{ preset }}-webp' : '2xl-webp' }}" dpr="1.4285" }} 2x" type="image/webp">
       <source media="(min-width: 1280px)" srcset="{{ glide:image preset="{{ preset ? '2xl-{{ preset }}' : '2xl' }}" }} 1x, {{ glide:image preset="{{ preset ? '2xl-{{ preset }}' : '2xl' }}" dpr="1.4285" }} 2x" type="image/jpeg">
@@ -20,6 +23,7 @@
       height="{{ image:height }}" 
       width="{{ image:width }}"
       class="block {{ class ?? '' }}"
-      loading="lazy">
+      loading="{{ loading ?? 'lazy' }}"
+      {{ if loading == 'eager' }}fetchpriority="high"{{ /if }}>
   </picture>
 </figure>
