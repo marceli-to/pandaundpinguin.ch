@@ -9,6 +9,13 @@ tabs:
             field:
               type: color
               display: Theme
+              instructions: 'Hintergrundfarbe für Projektseite und Teaser'
+              swatches:
+                - '#98F0A7'
+                - '#9ce1d4'
+                - '#b7deed'
+                - '#fef8cd'
+              allow_any: true
           -
             handle: title
             field:
